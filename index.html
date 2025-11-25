@@ -83,6 +83,7 @@
       font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
+      width: 100%;
     }
 
     #thankYouMessage {
@@ -110,7 +111,6 @@
       margin-top: 3rem;
     }
 
-    /* Mobile optimalisatie */
     @media (max-width: 768px) {
       header {
         padding: 1.8rem 1rem;
@@ -127,10 +127,6 @@
       .section {
         margin: 1.2rem 0.8rem;
         padding: 1.2rem;
-      }
-
-      form button {
-        width: 100%;
       }
     }
 
@@ -204,8 +200,15 @@
     <form id="registerForm" action="https://hook.eu2.make.com/kp9mo3585t2jdi1y9q22tinlr7dkca9a" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="form_type" value="registration">
 
-      <label for="companyName">Full Company Name:</label>
-      <input type="text" id="companyName" name="company_name" placeholder="e.g. Blue Ocean Logistics BV" required>
+      <label for="companyName">Full Company Name (no spaces allowed):</label>
+      <input 
+        type="text" 
+        id="companyName" 
+        name="company_name" 
+        placeholder="e.g. BlueOceanLogisticsBV" 
+        required
+        oninput="this.value = this.value.replace(/\s/g, '')"
+      >
 
       <label for="companyEmail">Company Email Address:</label>
       <input type="email" id="companyEmail" name="company_email" placeholder="e.g. contact@blueoceanlogistics.com" required>
@@ -238,11 +241,17 @@
     document.getElementById("registerForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const form = e.target;
-      const data = new FormData(form);
-      const companyName = document.getElementById("companyName").value.trim();
 
-      // Clean slug (remove spaces and special characters)
-      const slug = companyName.replace(/\s+/g, '');
+      const nameField = document.getElementById("companyName");
+      let companyName = nameField.value.trim().replace(/\s/g, '');
+
+      // Set corrected value (removes copy-paste spaces)
+      nameField.value = companyName;
+
+      const data = new FormData(form);
+
+      // Clean slug (remove spaces)
+      const slug = companyName;
 
       const excelFile = document.getElementById("excelFile").files[0];
 
