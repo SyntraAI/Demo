@@ -135,7 +135,7 @@
       <label for="description">What does your company do and what would you like your AI assistant to focus on?</label>
       <textarea id="description" name="company_description" rows="4" placeholder="Brief description..." required></textarea>
 
-      <label for="logo">Upload Company Logo:</label>
+      <label for="logo">Upload Company Logo (in jpeg format):</label>
       <input type="file" id="logo" name="company_logo" accept="image/*" required>
 
       <label for="excelFile">Upload a sample CSV file (max 2MB) to be used as content for your AI assistant:</label>
@@ -148,7 +148,7 @@
       <h3 id="thankTitle">Thank you for your registration!</h3>
       <p>We have received your details and will be in touch soon.</p>
       <p>You can access your personalized website <strong>within a minute</strong> at:</p>
-      <p><a id="companyLink" href="#" target="_blank">https://florisher.github.io/[YourCompany]</a></p>
+      <p><a id="companyLink" href="#" target="_blank">https://syntraai.github.io/[YourCompany]</a></p>
     </div>
   </div>
 
@@ -188,7 +188,7 @@
         form.style.display = "none";
         document.getElementById("thankYouMessage").style.display = "block";
         document.getElementById("thankTitle").innerText = `Thank you, ${companyName}!`;
-        const fullUrl = `https://florisher.github.io/${slug}/`;
+        const fullUrl = `https://syntraai.github.io/${slug}/`;
         document.getElementById("companyLink").href = fullUrl;
         document.getElementById("companyLink").innerText = fullUrl;
       }).catch(() => {
