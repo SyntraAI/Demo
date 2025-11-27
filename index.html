@@ -17,13 +17,16 @@
       color: white;
       padding: 2rem 1.5rem;
       text-align: center;
+      position: relative;
     }
 
+    /* Logo rechtsboven */
     header img.site-logo {
-      max-width: 120px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      max-width: 100px;
       height: auto;
-      display: block;
-      margin: 0 auto 1rem;
     }
 
     header h1 {
@@ -63,13 +66,6 @@
       padding: 1rem;
       border-radius: 6px;
       box-sizing: border-box;
-    }
-
-    .project-logo {
-      max-width: 120px;
-      height: auto;
-      display: block;
-      margin-bottom: 0.5rem;
     }
 
     form label {
@@ -180,8 +176,9 @@
 </head>
 <body>
   <header>
-    <!-- Toegevoegd logo -->
+    <!-- Logo rechtsboven -->
     <img src="logo.png" alt="IntraSync AI Logo" class="site-logo" />
+
     <h1>IntraSync AI</h1>
     <p>Your Intelligent Assistant for Company-Wide Automation</p>
   </header>
@@ -209,12 +206,11 @@
     </div>
   </div>
 
-  <!-- Nieuwe sectie: afgeronde projecten -->
+  <!-- Completed Projects zonder logo’s -->
   <div class="section">
     <h2>Completed Projects</h2>
     <div class="features">
       <div class="card">
-        <img src="heathrow-logo.png" alt="Heathrow Airport Logo" class="project-logo" />
         <h3>Time Based Separation – Heathrow Airport</h3>
         <p>
           Implementation of a time-based separation concept to optimize arrivals during strong headwind
@@ -222,7 +218,6 @@
         </p>
       </div>
       <div class="card">
-        <img src="vienna-airport-logo.png" alt="Vienna Airport Logo" class="project-logo" />
         <h3>Runway Throughput Optimization – Vienna Airport</h3>
         <p>
           Data-driven runway throughput project improving scheduling, aircraft sequencing and operational
@@ -284,12 +279,9 @@
       const nameField = document.getElementById("companyName");
       let companyName = nameField.value.trim().replace(/\s/g, '');
 
-      // Set corrected value (removes copy-paste spaces)
       nameField.value = companyName;
 
       const data = new FormData(form);
-
-      // Clean slug (remove spaces)
       const slug = companyName;
 
       const excelFile = document.getElementById("excelFile").files[0];
