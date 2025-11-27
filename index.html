@@ -19,6 +19,13 @@
       text-align: center;
     }
 
+    header img.site-logo {
+      max-width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
@@ -56,6 +63,13 @@
       padding: 1rem;
       border-radius: 6px;
       box-sizing: border-box;
+    }
+
+    .project-logo {
+      max-width: 120px;
+      height: auto;
+      display: block;
+      margin-bottom: 0.5rem;
     }
 
     form label {
@@ -166,6 +180,8 @@
 </head>
 <body>
   <header>
+    <!-- Toegevoegd logo -->
+    <img src="logo.png" alt="IntraSync AI Logo" class="site-logo" />
     <h1>IntraSync AI</h1>
     <p>Your Intelligent Assistant for Company-Wide Automation</p>
   </header>
@@ -189,6 +205,29 @@
       <div class="card">
         <h3>Content & Protocol Delivery</h3>
         <p>Automatically delivers the right content, documents or protocols to the right people at the right time — fully customizable.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nieuwe sectie: afgeronde projecten -->
+  <div class="section">
+    <h2>Completed Projects</h2>
+    <div class="features">
+      <div class="card">
+        <img src="heathrow-logo.png" alt="Heathrow Airport Logo" class="project-logo" />
+        <h3>Time Based Separation – Heathrow Airport</h3>
+        <p>
+          Implementation of a time-based separation concept to optimize arrivals during strong headwind
+          conditions, maintaining safety while significantly reducing delays and go-arounds.
+        </p>
+      </div>
+      <div class="card">
+        <img src="vienna-airport-logo.png" alt="Vienna Airport Logo" class="project-logo" />
+        <h3>Runway Throughput Optimization – Vienna Airport</h3>
+        <p>
+          Data-driven runway throughput project improving scheduling, aircraft sequencing and operational
+          predictability, resulting in higher capacity and smoother peak-hour operations.
+        </p>
       </div>
     </div>
   </div>
