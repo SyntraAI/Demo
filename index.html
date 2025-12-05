@@ -68,7 +68,7 @@
     }
 
     .nav-logo {
-      height: 64px;   /* groter logo */
+      height: 64px;
       width: auto;
       border-radius: 10px;
     }
@@ -895,12 +895,16 @@
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
-        padding: 7.2rem 1.4rem 3.8rem; /* iets compacter op mobiel */
+        padding: 7.2rem 1.4rem 3.8rem;
         gap: 2.2rem;
       }
 
+      .hero-text {
+        order: 1;  /* eerst de tekst */
+      }
+
       .hero-panel {
-        order: -1;
+        order: 2;  /* daarna de kaart Operational AI snapshot */
       }
 
       .hero-floating-pill {
@@ -943,7 +947,7 @@
       }
 
       .nav-logo {
-        height: 56px; /* iets kleiner dan desktop maar nog steeds groter dan eerst */
+        height: 56px;
       }
 
       .hero-actions {
@@ -980,7 +984,7 @@
       }
 
       .hero h1 {
-        font-size: 2.1rem;  /* leesbaarder op kleine schermen */
+        font-size: 2.1rem;
       }
 
       .section-title {
@@ -1066,11 +1070,11 @@
         <div class="hero-meta">
           <div class="hero-meta-item">
             <div class="hero-meta-dot"></div>
-            <span>10+ years in AI, optimisation and predictive modelling.</span>
+            <span>More than 10 years in AI, optimisation and predictive modelling.</span>
           </div>
           <div class="hero-meta-item">
             <div class="hero-meta-dot"></div>
-            <span>Experience across airports, logistics, agriculture and enterprise operations.</span>
+            <span>Experience across airports, logistics and enterprise operations.</span>
           </div>
         </div>
       </div>
@@ -1078,7 +1082,7 @@
       <div class="hero-panel reveal">
         <div class="hero-floating-pill">
           <span>✔</span>
-          Production-grade models, not just concepts.
+          Production grade models, not just concepts.
         </div>
         <div class="hero-card">
           <div class="hero-card-header">
@@ -1094,24 +1098,24 @@
 
           <div class="hero-metrics">
             <div class="metric-card">
-              <div class="metric-label">Runway & capacity</div>
-              <div class="metric-value">+8–15%</div>
+              <div class="metric-label">Runway and capacity</div>
+              <div class="metric-value">8 to 15%</div>
               <div class="metric-sub">Throughput increase with safety preserved.</div>
             </div>
             <div class="metric-card">
-              <div class="metric-label">Delay & waste</div>
-              <div class="metric-value">−20–40%</div>
+              <div class="metric-label">Delay and waste</div>
+              <div class="metric-value">20 to 40%</div>
               <div class="metric-sub">Reduction in delays, rework or scrap.</div>
             </div>
             <div class="metric-card">
               <div class="metric-label">Preparation time</div>
-              <div class="metric-value">−50%</div>
-              <div class="metric-sub">Less manual prep for frontline teams.</div>
+              <div class="metric-value">50% less</div>
+              <div class="metric-sub">Less manual preparation for frontline teams.</div>
             </div>
             <div class="metric-card">
               <div class="metric-label">Decision speed</div>
-              <div class="metric-value">×3</div>
-              <div class="metric-sub">Faster, data-backed decisions at the edge.</div>
+              <div class="metric-value">3 times</div>
+              <div class="metric-sub">Faster, data backed decisions at the edge.</div>
             </div>
           </div>
 
@@ -1121,11 +1125,11 @@
               From complex models to interfaces teams rely on.
             </div>
             <div>
-              Experience deploying ML in air-traffic management, dairy production
+              Experience deploying AI in air traffic management, industrial production
               and enterprise sales analytics, always with traceable impact on key metrics.
             </div>
             <div class="case-tags">
-              <div class="case-tag">Time-based separation</div>
+              <div class="case-tag">Time based separation</div>
               <div class="case-tag">Predictive operations</div>
               <div class="case-tag">Decision dashboards</div>
             </div>
@@ -1140,7 +1144,7 @@
         <div class="eyebrow">What WayNew does</div>
         <h2 class="section-title">Machine learning and AI that move the business forward.</h2>
         <p class="section-subtitle">
-          WayNew specialises in predictive intelligence for organisations with complex, high-stakes operations.
+          WayNew focuses on predictive intelligence for organisations with complex, high stakes operations.
           We combine advanced modelling with a practical understanding of how people work, so AI systems are
           trusted, adopted and measurable.
         </p>
@@ -1150,7 +1154,7 @@
         <div class="reveal">
           <div class="card-grid">
             <div class="feature-card">
-              <div class="feature-label">ML & AI</div>
+              <div class="feature-label">ML and AI</div>
               <div class="feature-icon">📈</div>
               <div class="feature-title">Predictive and prescriptive intelligence</div>
               <div class="feature-text">
@@ -1166,7 +1170,7 @@
               <div class="feature-title">Operational excellence at scale</div>
               <div class="feature-text">
                 We transform data from multiple systems into reliable pipelines and design
-                interfaces that make AI insights instantly usable for controllers, planners
+                interfaces that make AI insights usable for controllers, planners
                 and frontline teams.
               </div>
             </div>
@@ -1176,7 +1180,7 @@
               <div class="feature-icon">🧠</div>
               <div class="feature-title">Scenario and decision support</div>
               <div class="feature-text">
-                Simulation tools, digital twins and self-updating dashboards that connect
+                Simulation tools, digital twins and self updating dashboards that connect
                 strategic questions to operational detail, including impact on service,
                 throughput and cost.
               </div>
@@ -1187,8 +1191,8 @@
               <div class="feature-icon">🤝</div>
               <div class="feature-title">Change that lasts</div>
               <div class="feature-text">
-                We involve stakeholders early, co-design protocols, and define clear KPIs so
-                every AI initiative is evaluated on business impact, not just model accuracy.
+                We involve stakeholders early, co design protocols and define clear indicators
+                so every AI initiative is evaluated on business impact, not only model accuracy.
               </div>
             </div>
           </div>
@@ -1197,22 +1201,22 @@
         <div class="reveal">
           <h3 style="font-size:1.1rem;color:#163553;margin-bottom:0.4rem;">Where WayNew creates value</h3>
           <p style="font-size:0.94rem;color:#4b6076;margin-bottom:0.9rem;">
-            The foundation lies in aerospace engineering and air traffic management –
-            environments where safety, reliability and regulation are non-negotiable.
-            That same discipline now powers projects across other domains.
+            The foundation lies in aerospace engineering and air traffic management,
+            environments where safety, reliability and regulation are non negotiable.
+            The same discipline now powers projects across other domains.
           </p>
 
           <ul style="font-size:0.92rem;color:#4b6076;list-style: none;margin-left:0;padding-left:0;">
             <li style="margin-bottom:0.45rem;">• <strong>Airports and transport:</strong> runway and gate throughput, delay prediction, passenger and baggage flows.</li>
             <li style="margin-bottom:0.45rem;">• <strong>Logistics and supply chain:</strong> routing, network optimisation, capacity and resource allocation.</li>
-            <li style="margin-bottom:0.45rem;">• <strong>Agriculture and animal health:</strong> predictive health scoring, production forecasting, intervention planning.</li>
-            <li style="margin-bottom:0.45rem;">• <strong>Enterprise operations:</strong> sales and service analytics, lead prioritisation, workflow automation.</li>
+            <li style="margin-bottom:0.45rem;">• <strong>Industrial production and energy:</strong> equipment health prediction, production forecasting and intervention planning.</li>
+            <li style="margin-bottom:0.45rem;">• <strong>Enterprise operations:</strong> sales and service analytics, lead prioritisation and workflow automation.</li>
           </ul>
 
           <div class="pill-row">
             <span class="pill">Operational AI for complex environments</span>
             <span class="pill">Predictive modelling for critical decisions</span>
-            <span class="pill">From proof-of-concept to production</span>
+            <span class="pill">From proof of concept to production</span>
             <span class="pill">Data products that fit daily workflows</span>
           </div>
         </div>
@@ -1226,7 +1230,7 @@
         <h2 class="section-title">From opportunity to deployed AI system in clear steps.</h2>
         <p class="section-subtitle">
           WayNew combines strategy, data science and engineering into a pragmatic delivery approach.
-          The focus is on decisions, not just models.
+          The focus is on decisions, not only models.
         </p>
       </div>
 
@@ -1236,9 +1240,9 @@
           <div class="step-title">Discover and prioritise</div>
           <div class="step-text">
             We map operational pain points, data assets and constraints, then identify
-            AI opportunities with the strongest balance of value and feasibility.
+            AI opportunities with a strong balance of value and feasibility.
           </div>
-          <div class="step-tag">Value-led roadmap</div>
+          <div class="step-tag">Value based roadmap</div>
         </div>
 
         <div class="step-card">
@@ -1255,17 +1259,17 @@
           <div class="step-number">03</div>
           <div class="step-title">Build, validate and explain</div>
           <div class="step-text">
-            We build robust pipelines and models using modern tooling, with emphasis on
+            We build robust pipelines and models with modern tooling, with emphasis on
             explainability, monitoring and documentation so stakeholders understand the system.
           </div>
-          <div class="step-tag">Production-ready ML</div>
+          <div class="step-tag">Production ready AI</div>
         </div>
 
         <div class="step-card">
           <div class="step-number">04</div>
           <div class="step-title">Deploy and scale</div>
           <div class="step-text">
-            We integrate with your systems, support your teams, and iterate on real usage.
+            We integrate with your systems, support your teams and iterate on real usage.
             Once value is clear, we help scale to new sites and business units.
           </div>
           <div class="step-tag">Sustainable adoption</div>
@@ -1294,22 +1298,22 @@
           </div>
 
           <h3 style="color:#163553;font-size:1.1rem;margin-bottom:0.5rem;">
-            Time-based separation and runway throughput optimisation
+            Time based separation and runway throughput optimisation
           </h3>
           <p style="font-size:0.94rem;color:#4b6076;">
             With air traffic management partners, we helped design and validate
-            analytics and ML solutions that optimise runway usage while meeting strict
+            analytics and AI solutions that optimise runway usage while meeting strict
             safety requirements.
           </p>
 
           <div class="results-metric-row">
             <div class="results-metric">
-              <strong>+1 landing</strong>
+              <strong>One more landing</strong>
               per hour on average during strong headwinds.
             </div>
             <div class="results-metric">
-              <strong>−80,000 min</strong>
-              annual arrival delay reduction at a major European hub.
+              <strong>80,000 minutes less</strong>
+              arrival delay per year at a major European hub.
             </div>
             <div class="results-metric">
               <strong>Standardised playbooks</strong>
@@ -1325,20 +1329,20 @@
 
         <div class="case-list reveal">
           <div class="case-item">
-            <div class="case-meta">Animal health and agriculture</div>
-            <div class="case-title"><span>🐄</span> Predictive health and production insights</div>
+            <div class="case-meta">Industrial production</div>
+            <div class="case-title"><span>🏭</span> Predictive quality and throughput insights</div>
             <div>
-              Machine learning models for the dairy sector to detect health patterns early,
-              forecast production and optimise interventions, supporting healthier herds
-              and more stable output.
+              Machine learning models for production lines to detect quality issues early,
+              forecast output and optimise interventions, which supports more stable
+              processes and better use of capacity.
             </div>
           </div>
 
           <div class="case-item">
             <div class="case-meta">Enterprise sales and service</div>
-            <div class="case-title"><span>📊</span> AI-enhanced customer analytics</div>
+            <div class="case-title"><span>📊</span> AI enhanced customer analytics</div>
             <div>
-              End-to-end analytics and decision support dashboards that help sales teams
+              End to end analytics and decision support dashboards that help sales teams
               prioritise leads, prepare meetings faster and focus on the right customers.
               In one portfolio, preparation time per representative was roughly halved.
             </div>
@@ -1346,11 +1350,11 @@
 
           <div class="case-item">
             <div class="case-meta">Research and innovation</div>
-            <div class="case-title"><span>🎓</span> 25+ peer-reviewed publications</div>
+            <div class="case-title"><span>🎓</span> More than 25 peer reviewed publications</div>
             <div>
-              Work published on topics such as time-based separation, runway occupancy,
-              operational resilience and ML-based prediction systems, ensuring every project
-              is grounded in tested methods rather than hype.
+              Work published on topics such as time based separation, runway occupancy,
+              operational resilience and AI based prediction systems, which helps ensure every project
+              is grounded in tested methods instead of hype.
             </div>
           </div>
         </div>
@@ -1364,7 +1368,7 @@
         <h2 class="section-title">Applied AI from research to daily operations.</h2>
         <p class="section-subtitle">
           WayNew brings together experience in aerospace, data science and operational analytics
-          to deliver end-to-end machine learning systems that work under real-world constraints.
+          to deliver end to end machine learning systems that work under real world constraints.
         </p>
       </div>
 
@@ -1375,13 +1379,12 @@
           <div class="bio-role">Applied AI and Data Science Partner</div>
           <div class="bio-text">
             The team behind WayNew has led the development and deployment of predictive models and
-            AI solutions for air traffic control, airports, animal health and enterprise operations.
-            Projects span early discovery through to production systems in regulated, safety-critical
-            environments.
+            AI solutions for air traffic control, airports, logistics and enterprise operations.
+            Projects span early discovery through to production systems in regulated environments.
           </div>
           <div class="bio-text">
-            Collectively, the work has contributed to more than two dozen peer-reviewed publications
-            on AI, aviation and data-driven operations, as well as industry recognition within
+            Collectively, the work has contributed to more than two dozen peer reviewed publications
+            on AI, aviation and data driven operations, as well as industry recognition within
             engineering and air traffic management communities.
           </div>
           <div class="bio-tags">
@@ -1416,13 +1419,13 @@
             </a>
           </div>
           <div class="cta-whisper">
-            Typical starting engagement: focused opportunity scan and concept design in 2–4 weeks.
+            Typical starting engagement: focused opportunity scan and concept design in 2 to 4 weeks.
           </div>
         </div>
 
         <div class="cta-right">
           <div class="cta-right-row">
-            <strong>WayNew</strong> – Applied AI for high-impact operations.
+            <strong>WayNew</strong> – Applied AI for high impact operations.
           </div>
           <div class="cta-right-row">
             Contact: <a href="mailto:info@syntraaiapp.com">info@syntraaiapp.com</a>
@@ -1461,7 +1464,7 @@
     const taglines = [
       "Applied AI that delivers measurable business value.",
       "Predictive intelligence for faster, better decisions.",
-      "From complex operations to clear, data-driven choices.",
+      "From complex operations to clear, data driven choices.",
       "Turning data into everyday decision support.",
       "Machine learning systems your teams actually use."
     ];
