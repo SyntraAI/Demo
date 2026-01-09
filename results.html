@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WayNew | Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="WayNew.jpg" />
+  <link rel="apple-touch-icon" href="WayNew.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="index.html" style="display:flex;align-items:center;gap:0.8rem;">
+          <img src="WayNew.jpg" alt="WayNew Logo" class="nav-logo" />
+          <div class="nav-title">WAYNEW</div>
+        </a>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="what-we-do.html">What we do</a>
+        <a href="approach.html">How we work</a>
+        <a href="results.html">Results</a>
+        <a href="indexmain.html">IntraSync use case</a>
+        <a href="expertise.html">Expertise</a>
+        <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu ▾</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page" id="results">
+      <div class="section-header reveal">
+        <div class="eyebrow">Sample results</div>
+        <h2 class="section-title">From airport runways to production lines.</h2>
+        <p class="section-subtitle">
+          WayNew builds on AI and analytics work that has improved throughput, stability
+          and quality across several domains. For a concrete personal AI example,
+          see the <a href="indexmain.html">IntraSync use case</a>.
+        </p>
+      </div>
+
+      <div class="results-grid">
+        <div class="results-highlight reveal">
+          <div class="badge-row">
+            <span class="badge">Aviation and airports</span>
+            <span class="badge">Predictive modelling</span>
+            <span class="badge">Safety critical</span>
+          </div>
+
+          <h3 style="color:#163553;font-size:1.1rem;margin-bottom:0.5rem;">
+            Time based separation and runway throughput optimisation
+          </h3>
+          <p style="font-size:0.94rem;color:#4b6076;">
+            With air traffic management partners, we helped design and validate
+            analytics and AI solutions that optimise runway usage while meeting strict
+            safety requirements.
+          </p>
+
+          <div class="results-metric-row">
+            <div class="results-metric">
+              <strong>One more landing</strong>
+              per hour on average during strong headwinds.
+            </div>
+            <div class="results-metric">
+              <strong>80,000 minutes less</strong>
+              arrival delay per year at a major European hub.
+            </div>
+            <div class="results-metric">
+              <strong>Standardised playbooks</strong>
+              capturing best practices across multiple airports.
+            </div>
+          </div>
+
+          <p class="mini-note">
+            The same thinking applies to other networks such as logistics hubs,
+            production facilities and large service operations with shared resources.
+          </p>
+        </div>
+
+        <div class="case-list reveal">
+          <div class="case-item">
+            <div class="case-meta">Industrial production</div>
+            <div class="case-title"><span>🏭</span> Predictive quality and throughput insights</div>
+            <div>
+              Machine learning models for production lines to detect quality issues early,
+              forecast output and optimise interventions, which supports more stable
+              processes and better use of capacity.
+            </div>
+          </div>
+
+          <div class="case-item">
+            <div class="case-meta">Enterprise sales and service</div>
+            <div class="case-title"><span>📊</span> AI enhanced customer analytics</div>
+            <div>
+              End to end analytics and decision support dashboards that help sales teams
+              prioritise leads, prepare meetings faster and focus on the right customers.
+              In one portfolio, preparation time per representative was roughly halved.
+            </div>
+          </div>
+
+          <div class="case-item">
+            <div class="case-meta">Research and innovation</div>
+            <div class="case-title"><span>🎓</span> More than 25 peer reviewed publications</div>
+            <div>
+              Work published on topics such as time based separation, runway occupancy,
+              operational resilience and AI based prediction systems, which helps ensure every project
+              is grounded in tested methods instead of hype.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> WayNew. All rights reserved.</span>
+    <span>Built for organisations that care about reliability, safety and impact.</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
