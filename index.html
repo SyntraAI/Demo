@@ -5,148 +5,234 @@
   <title>WayNew | Applied AI for Real Business Impact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- FAVICON -->
   <link rel="icon" type="image/jpeg" href="WayNew.jpg" />
   <link rel="apple-touch-icon" href="WayNew.jpg" />
 
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root {
+      --brand-primary: #082d46;
+      --brand-accent: #1da1f2;
+      --bg-soft: #f5f7fb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg-soft);
+      color: #12212f;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= NAV ================= */
+
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(8,45,70,0.97);
+      color: white;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.7rem 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .nav-logo { height: 56px; border-radius: 8px; }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .nav-cta {
+      background: white;
+      color: #082d46;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      margin-top: 6.5rem;
+      max-width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 4.5rem 1.6rem 4.8rem;
+
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 3rem;
+      align-items: center;
+
+      background-image:
+        linear-gradient(
+          rgba(245,247,251,0.88),
+          rgba(245,247,251,0.92)
+        ),
+        url("hero-bg.png");
+
+      background-size: cover;
+      background-position: center;
+      border-radius: 28px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--brand-primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero-highlight { color: var(--brand-accent); }
+
+    .hero-subtitle {
+      max-width: 34rem;
+      margin-bottom: 1.5rem;
+      color: #42566b;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      background: var(--brand-accent);
+      border-radius: 999px;
+      padding: 0.8rem 1.4rem;
+      font-weight: 600;
+      color: #082d46;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(8,45,70,0.3);
+      border-radius: 999px;
+      padding: 0.8rem 1.4rem;
+      background: white;
+    }
+
+    .hero-card {
+      background: white;
+      padding: 1.4rem;
+      border-radius: 22px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .metric {
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 4rem 1.6rem;
+    }
+
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.4rem 1.6rem;
+      font-size: 0.8rem;
+      color: #7b8ca0;
+      border-top: 1px dashed rgba(8,45,70,0.2);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="nav-left">
-        <a href="index.html" style="display:flex;align-items:center;gap:0.8rem;">
-          <img src="WayNew.jpg" alt="WayNew Logo" class="nav-logo" />
-          <div class="nav-title">WAYNEW</div>
-        </a>
-      </div>
 
-      <div class="nav-links" id="navLinks">
-        <a href="what-we-do.html">What we do</a>
-        <a href="approach.html">How we work</a>
-        <a href="results.html">Results</a>
-        <a href="indexmain.html">IntraSync use case</a>
-        <a href="expertise.html">Expertise</a>
-        <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
-      </div>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        Menu ▾
-      </button>
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <img src="WayNew.jpg" class="nav-logo" alt="WayNew logo" />
+      <strong>WAYNEW</strong>
     </div>
-  </nav>
+    <div class="nav-links">
+      <a href="#what-we-do">What we do</a>
+      <a href="#approach">How we work</a>
+      <a href="#results">Results</a>
+      <a href="#contact" class="nav-cta">Talk to us</a>
+    </div>
+  </div>
+</nav>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-text reveal">
-        <div class="hero-pill">
-          <div class="hero-pill-icon">↑</div>
-          <div class="hero-pill-text">Applied AI for operations</div>
-        </div>
+<!-- ================= HERO ================= -->
+<main>
+  <section class="hero">
+    <div>
+      <h1>
+        WayNew turns <span class="hero-highlight">machine learning</span><br>
+        into measurable business outcomes.
+      </h1>
 
-        <h1>
-          WayNew turns <span class="hero-highlight">machine learning</span><br />
-          into measurable business outcomes.
-        </h1>
+      <p class="hero-subtitle">
+        We design, build and operationalise AI systems that improve throughput,
+        reliability and decision-making in complex operations.
+      </p>
 
-        <p class="hero-subtitle">
-          We design, build and operationalise AI systems that simplify complex decisions,
-          improve throughput and reliability, and keep your teams focused on the work that matters most.
-        </p>
-
-        <div class="hero-tagline-rotator">
-          <span class="hero-tagline-label">Core message</span>
-          <span id="taglineText" class="tagline-text">Applied AI that delivers measurable business value.</span>
-        </div>
-
-        <div class="hero-actions">
-          <a href="contact.html" class="btn-primary">
-            Schedule a discovery call <span>➜</span>
-          </a>
-          <a href="results.html" class="btn-outline">
-            View example results <span>⟶</span>
-          </a>
-        </div>
-
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <div class="hero-meta-dot"></div>
-            <span><strong>15+ years of experience</strong> in AI, optimisation and predictive modelling.</span>
-          </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-dot"></div>
-            <span>Experience across airports, logistics and enterprise operations.</span>
-          </div>
-        </div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Schedule a discovery call</a>
+        <a href="#results" class="btn-outline">View results</a>
       </div>
+    </div>
 
-      <div class="hero-panel reveal">
-        <div class="hero-floating-pill">
-          <span>✔</span>
-          Production grade models, not just concepts.
-        </div>
+    <div class="hero-card">
+      <div class="metric">+20% throughput</div>
+      <div class="metric">−30% delays</div>
+      <div class="metric">−25% fuel burn</div>
+      <div class="metric">+2 landings / hour</div>
+    </div>
+  </section>
 
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <div>
-              <div class="hero-card-title">Operational AI snapshot</div>
-              <div style="font-size:0.8rem;color:#6b7f93;">Typical value WayNew unlocks</div>
-            </div>
-            <div class="hero-card-badge">
-              <span></span>
-              In live operations
-            </div>
-          </div>
+  <!-- Placeholder sections -->
+  <section id="what-we-do"><h2>What we do</h2></section>
+  <section id="approach"><h2>How we work</h2></section>
+  <section id="results"><h2>Results</h2></section>
+  <section id="contact"><h2>Contact</h2></section>
+</main>
 
-          <div class="hero-metrics">
-            <div class="metric-card">
-              <div class="metric-label">Runway and capacity</div>
-              <div class="metric-value">8 to 15%</div>
-              <div class="metric-sub">Throughput increase with safety preserved.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">Delay and waste</div>
-              <div class="metric-value">20 to 40%</div>
-              <div class="metric-sub">Reduction in delays, rework or scrap.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">Preparation time</div>
-              <div class="metric-value">50% less</div>
-              <div class="metric-sub">Less manual preparation for frontline teams.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">Decision speed</div>
-              <div class="metric-value">3 times</div>
-              <div class="metric-sub">Faster, data backed decisions at the edge.</div>
-            </div>
-          </div>
+<footer>
+  <span>© <span id="year"></span> WayNew</span>
+  <span>Applied AI for high-impact operations</span>
+</footer>
 
-          <div class="hero-case-note">
-            <div class="case-pill">Case insight</div>
-            <div class="case-highlight">From complex models to interfaces teams rely on.</div>
-            <div>
-              Experience deploying AI in air traffic management, industrial production
-              and enterprise sales analytics, always with traceable impact on key metrics.
-            </div>
-            <div class="case-tags">
-              <div class="case-tag">Time based separation</div>
-              <div class="case-tag">Predictive operations</div>
-              <div class="case-tag">Decision dashboards</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-  <footer>
-    <span>© <span id="year"></span> WayNew. All rights reserved.</span>
-    <span>Built for organisations that care about reliability, safety and impact.</span>
-  </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>
