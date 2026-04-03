@@ -8,7 +8,7 @@
   <link rel="icon" type="image/jpeg" href="WayNew.jpg" />
   <link rel="apple-touch-icon" href="WayNew.jpg" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -40,11 +40,11 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero">
-      <div class="hero-text reveal">
+    <section class="hero hero-open">
+      <header class="hero-text reveal">
         <div class="hero-pill">
-          <div class="hero-pill-icon">↑</div>
-          <div class="hero-pill-text">Applied AI for operations</div>
+          <span class="hero-pill-icon">↑</span>
+          <span class="hero-pill-text">Applied AI for operations</span>
         </div>
 
         <h1>
@@ -59,7 +59,9 @@
 
         <div class="hero-tagline-rotator">
           <span class="hero-tagline-label">Core message</span>
-          <span id="taglineText" class="tagline-text">Applied AI that delivers measurable business value.</span>
+          <span id="taglineText" class="tagline-text">
+            Applied AI that delivers measurable business value.
+          </span>
         </div>
 
         <div class="hero-actions">
@@ -71,74 +73,83 @@
           </a>
         </div>
 
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <div class="hero-meta-dot"></div>
+        <ul class="hero-meta">
+          <li class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
             <span><strong>15+ years of experience</strong> in AI, optimisation and predictive modelling.</span>
-          </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-dot"></div>
+          </li>
+          <li class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
             <span>Experience across airports, logistics and enterprise operations.</span>
-          </div>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </header>
 
-      <div class="hero-panel reveal">
+      <aside class="hero-panel reveal">
         <div class="hero-floating-pill">
           <span>✔</span>
           Production grade models, not just concepts.
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-header">
+        <article class="hero-summary">
+          <div class="hero-summary-top">
             <div>
-              <div class="hero-card-title">Operational AI snapshot</div>
-              <div style="font-size:0.8rem;color:#6b7f93;">Typical value WayNew unlocks</div>
+              <p class="hero-card-title">Operational AI snapshot</p>
+              <p class="hero-summary-subtitle">Typical value WayNew unlocks</p>
             </div>
+
             <div class="hero-card-badge">
               <span></span>
               In live operations
             </div>
           </div>
 
-          <div class="hero-metrics">
-            <div class="metric-card">
-              <div class="metric-label">Runway and capacity</div>
-              <div class="metric-value">8 to 15%</div>
-              <div class="metric-sub">Throughput increase with safety preserved.</div>
+          <div class="hero-summary-divider"></div>
+
+          <div class="hero-metrics hero-metrics-inline">
+            <div class="metric-item">
+              <p class="metric-label">Runway and capacity</p>
+              <p class="metric-value">8 to 15%</p>
+              <p class="metric-sub">Throughput increase with safety preserved.</p>
             </div>
-            <div class="metric-card">
-              <div class="metric-label">Delay and waste</div>
-              <div class="metric-value">20 to 40%</div>
-              <div class="metric-sub">Reduction in delays, rework or scrap.</div>
+
+            <div class="metric-item">
+              <p class="metric-label">Delay and waste</p>
+              <p class="metric-value">20 to 40%</p>
+              <p class="metric-sub">Reduction in delays, rework or scrap.</p>
             </div>
-            <div class="metric-card">
-              <div class="metric-label">Preparation time</div>
-              <div class="metric-value">50% less</div>
-              <div class="metric-sub">Less manual preparation for frontline teams.</div>
+
+            <div class="metric-item">
+              <p class="metric-label">Preparation time</p>
+              <p class="metric-value">50% less</p>
+              <p class="metric-sub">Less manual preparation for frontline teams.</p>
             </div>
-            <div class="metric-card">
-              <div class="metric-label">Decision speed</div>
-              <div class="metric-value">3 times</div>
-              <div class="metric-sub">Faster, data backed decisions at the edge.</div>
+
+            <div class="metric-item">
+              <p class="metric-label">Decision speed</p>
+              <p class="metric-value">3 times</p>
+              <p class="metric-sub">Faster, data backed decisions at the edge.</p>
             </div>
           </div>
 
-          <div class="hero-case-note">
-            <div class="case-pill">Case insight</div>
-            <div class="case-highlight">From complex models to interfaces teams rely on.</div>
-            <div>
+          <div class="hero-summary-divider"></div>
+
+          <div class="hero-case-note hero-case-note-open">
+            <p class="case-pill">Case insight</p>
+            <h2 class="case-highlight">From complex models to interfaces teams rely on.</h2>
+            <p>
               Experience deploying AI in air traffic management, industrial production
               and enterprise sales analytics, always with traceable impact on key metrics.
-            </div>
-            <div class="case-tags">
-              <div class="case-tag">Time based separation</div>
-              <div class="case-tag">Predictive operations</div>
-              <div class="case-tag">Decision dashboards</div>
-            </div>
+            </p>
+
+            <ul class="case-tags">
+              <li class="case-tag">Time based separation</li>
+              <li class="case-tag">Predictive operations</li>
+              <li class="case-tag">Decision dashboards</li>
+            </ul>
           </div>
-        </div>
-      </div>
+        </article>
+      </aside>
     </section>
   </main>
 
