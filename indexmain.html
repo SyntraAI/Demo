@@ -4,323 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IntraSync AI | Your Smart Company Assistant</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-    }
-
-    /* === HERO / HEADER === */
-    header {
-      background: linear-gradient(135deg, #050816, #0A0F24, #10203d);
-      color: white;
-      padding: 1.5rem 1.5rem; /* COMPACT HEADER */
-      text-align: center;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero-logo {
-      height: 120px;
-      max-width: 100%;
-      margin-bottom: 1.2rem; /* iets compacter */
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.3rem; /* iets kleiner voor compacte header */
-      letter-spacing: 0.03em;
-    }
-
-    header p.hero-subtitle {
-      font-size: 1.05rem;
-      margin-top: 0.4rem;
-      opacity: 0.9;
-    }
-
-    /* === SECTIONS / CARDS === */
-    .section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      box-sizing: border-box;
-    }
-
-    .section h2 {
-      color: #1a73e8;
-      margin-top: 0;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .card {
-      background: #eef1f7;
-      padding: 1rem;
-      border-radius: 6px;
-      box-sizing: border-box;
-    }
-
-    /* === FORM === */
-    form label {
-      font-weight: bold;
-      display: block;
-      margin-top: 0.5rem;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 0.6rem 0.7rem;
-      margin: 0.4rem 0 1rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-
-    form button {
-      background: #1a73e8;
-      color: white;
-      border: none;
-      padding: 0.9rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      transition: background 0.2s ease;
-    }
-
-    form button:hover {
-      background: #155fc0;
-    }
-
-    #thankYouMessage {
-      display: none;
-      padding: 1rem;
-      background: #e6f4ea;
-      border: 1px solid #34a853;
-      border-radius: 6px;
-      color: #0f5132;
-      margin-top: 1rem;
-    }
-
-    #thankYouMessage a {
-      color: #0f5132;
-      font-weight: bold;
-      text-decoration: underline;
-      word-break: break-all;
-    }
-
-    footer {
-      background: #000;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-
-    /* === RESPONSIVE === */
-    @media (max-width: 768px) {
-      header {
-        padding: 1.3rem 1rem;
-      }
-
-      .hero-logo {
-        height: 95px;
-        margin-bottom: 1rem;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
-      header p.hero-subtitle {
-        font-size: 0.95rem;
-      }
-
-      .section {
-        margin: 1.2rem 0.8rem;
-        padding: 1.2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
-        padding: 1.2rem 0.8rem;
-      }
-
-      .hero-logo {
-        height: 80px;
-      }
-
-      header h1 {
-        font-size: 1.7rem;
-      }
-
-      header p.hero-subtitle {
-        font-size: 0.9rem;
-      }
-
-      .section {
-        margin: 1rem 0.6rem;
-        padding: 1rem;
-      }
-
-      .card {
-        padding: 0.9rem;
-      }
-
-      form input,
-      form textarea {
-        font-size: 0.95rem;
-      }
-
-      form button {
-        font-size: 0.95rem;
-        padding: 0.8rem;
-      }
-    }
-  </style>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="index.html" style="display:flex;align-items:center;gap:0.8rem;">
+          <img src="logo.png" alt="IntraSync Logo" class="nav-logo" />
+          <div class="nav-title">IntraSync</div>
+        </a>
+      </div>
 
-  <header>
-    <div class="hero-content">
-      <img src="logo.png" alt="IntraSync AI Logo" class="hero-logo" />
-      <h1>IntraSync AI</h1>
-      <p class="hero-subtitle">Your Intelligent Assistant for Company-Wide Automation</p>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">WayNew main page</a>
+        <a href="#what-is">What is it</a>
+        <a href="#features">Capabilities</a>
+        <a href="#projects">Projects</a>
+        <a href="#register" class="nav-cta">Start free trial <span>↗</span></a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu ▾</button>
     </div>
-  </header>
-<div style="text-align:center; margin-top: 1.5rem;">
-  <a href="index.html" style="
-    display:inline-block;
-    padding:12px 20px;
-    background:#1a73e8;
-    color:white;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:600;
-    box-shadow:0 3px 8px rgba(0,0,0,0.2);
-  ">
-    ➜ Go to Main WayNew Page
-  </a>
-</div>
+  </nav>
 
-  <div class="section">
-    <h2>What is IntraSync?</h2>
-    <p>
-      IntraSync is an internal smart assistant designed to automate content delivery, decision-making,
-      and protocol execution based on live data from your organization. It's like having a digital
-      operations expert embedded in every department.
-    </p>
-  </div>
+  <main class="intrasync-page">
+    <section class="intrasync-hero reveal">
+      <div class="intrasync-logo-wrap">
+        <img src="logo.png" alt="IntraSync AI Logo" class="intrasync-logo" />
+      </div>
 
-  <div class="section">
-    <h2>What Can It Do?</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Auto-Read Company Data</h3>
+      <div class="intrasync-copy">
+        <div class="eyebrow">IntraSync AI</div>
+        <h1>Your intelligent assistant for company-wide automation.</h1>
         <p>
-          Continuously ingests relevant documents, updates, and team input to build an active knowledge base
-          per customer or department.
+          IntraSync is designed to automate content delivery, decision support and protocol execution
+          based on live organisational data. It acts like a digital operations expert that supports
+          every department with the right information at the right moment.
         </p>
+
+        <div class="intrasync-actions">
+          <a href="#register" class="btn-primary">Start free trial <span>→</span></a>
+          <a href="index.html" class="btn-outline">Go to main WayNew page <span>→</span></a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Smart Decision Support</h3>
+    </section>
+
+    <div class="intrasync-grid">
+      <section class="intrasync-section reveal" id="what-is">
+        <h2>What is IntraSync?</h2>
         <p>
-          Suggests actions, flags risks, or proposes optimizations based on patterns in your internal workflows.
+          IntraSync is an internal smart assistant designed to automate content delivery, decision-making,
+          and protocol execution based on live data from your organization. It's like having a digital
+          operations expert embedded in every department.
         </p>
-      </div>
-      <div class="card">
-        <h3>Content & Protocol Delivery</h3>
-        <p>
-          Automatically delivers the right content, documents or protocols to the right people at the right time —
-          fully customizable.
+      </section>
+
+      <section class="intrasync-section reveal" id="features">
+        <h2>What can it do?</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Auto-Read Company Data</h3>
+            <p>
+              Continuously ingests relevant documents, updates, and team input to build an active knowledge base
+              per customer or department.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Smart Decision Support</h3>
+            <p>
+              Suggests actions, flags risks, or proposes optimizations based on patterns in your internal workflows.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Content & Protocol Delivery</h3>
+            <p>
+              Automatically delivers the right content, documents or protocols to the right people at the right time —
+              fully customizable.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="intrasync-section reveal" id="projects">
+        <h2>Completed projects</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Time Based Separation – Heathrow Airport</h3>
+            <p>
+              Implementation of a time-based separation concept to optimize arrivals during strong headwind
+              conditions, maintaining safety while significantly reducing delays and go-arounds.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Runway Throughput Optimization – Vienna Airport</h3>
+            <p>
+              Data-driven runway throughput project improving scheduling, aircraft sequencing and operational
+              predictability, resulting in higher capacity and smoother peak-hour operations.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="intrasync-section reveal" id="register">
+        <h2>Register your company</h2>
+        <p style="margin-bottom:1rem;">
+          Fill in your company details to activate your own AI Assistant.
         </p>
-      </div>
+
+        <form id="registerForm" action="https://hook.eu2.make.com/kp9mo3585t2jdi1y9q22tinlr7dkca9a" method="POST" enctype="multipart/form-data" class="form-grid">
+          <input type="hidden" name="form_type" value="registration">
+
+          <div>
+            <label for="companyName">Full Company Name (no spaces allowed):</label>
+            <input
+              type="text"
+              id="companyName"
+              name="company_name"
+              placeholder="e.g. BlueOceanLogisticsBV"
+              required
+              oninput="this.value = this.value.replace(/\s/g, '')"
+            >
+          </div>
+
+          <div>
+            <label for="companyEmail">Company Email Address:</label>
+            <input type="email" id="companyEmail" name="company_email" placeholder="e.g. contact@blueoceanlogistics.com" required>
+          </div>
+
+          <div>
+            <label for="description">What does your company do and what would you like your AI assistant to focus on?</label>
+            <textarea id="description" name="company_description" rows="4" placeholder="Brief description..." required></textarea>
+          </div>
+
+          <div>
+            <label for="logo">Upload Company Logo (in jpeg format):</label>
+            <input type="file" id="logo" name="company_logo" accept="image/*" required>
+          </div>
+
+          <div>
+            <label for="excelFile">Upload a sample CSV file (max 2MB) to be used as content for your AI assistant:</label>
+            <input type="file" id="excelFile" name="company_excel" accept=".csv" required>
+          </div>
+
+          <button type="submit" class="btn-primary">Start Free Trial</button>
+        </form>
+
+        <div id="thankYouMessage">
+          <h3 id="thankTitle">Thank you for your registration!</h3>
+          <p>We have received your details and will be in touch soon.</p>
+          <p>You can access your personalized website <strong>within a minute</strong> at:</p>
+          <p><a id="companyLink" href="#" target="_blank">https://syntraai.github.io/[YourCompany]</a></p>
+        </div>
+      </section>
     </div>
-  </div>
-
-  <div class="section">
-    <h2>Completed Projects</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Time Based Separation – Heathrow Airport</h3>
-        <p>
-          Implementation of a time-based separation concept to optimize arrivals during strong headwind
-          conditions, maintaining safety while significantly reducing delays and go-arounds.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Runway Throughput Optimization – Vienna Airport</h3>
-        <p>
-          Data-driven runway throughput project improving scheduling, aircraft sequencing and operational
-          predictability, resulting in higher capacity and smoother peak-hour operations.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Register Your Company</h2>
-    <p>Fill in your company details to activate your own AI Assistant.</p>
-
-    <form id="registerForm" action="https://hook.eu2.make.com/kp9mo3585t2jdi1y9q22tinlr7dkca9a" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="form_type" value="registration">
-
-      <label for="companyName">Full Company Name (no spaces allowed):</label>
-      <input 
-        type="text" 
-        id="companyName" 
-        name="company_name" 
-        placeholder="e.g. BlueOceanLogisticsBV" 
-        required
-        oninput="this.value = this.value.replace(/\s/g, '')"
-      >
-
-      <label for="companyEmail">Company Email Address:</label>
-      <input type="email" id="companyEmail" name="company_email" placeholder="e.g. contact@blueoceanlogistics.com" required>
-
-      <label for="description">What does your company do and what would you like your AI assistant to focus on?</label>
-      <textarea id="description" name="company_description" rows="4" placeholder="Brief description..." required></textarea>
-
-      <label for="logo">Upload Company Logo (in jpeg format):</label>
-      <input type="file" id="logo" name="company_logo" accept="image/*" required>
-
-      <label for="excelFile">Upload a sample CSV file (max 2MB) to be used as content for your AI assistant:</label>
-      <input type="file" id="excelFile" name="company_excel" accept=".csv" required>
-
-      <button type="submit">Start Free Trial</button>
-    </form>
-
-    <div id="thankYouMessage">
-      <h3 id="thankTitle">Thank you for your registration!</h3>
-      <p>We have received your details and will be in touch soon.</p>
-      <p>You can access your personalized website <strong>within a minute</strong> at:</p>
-      <p><a id="companyLink" href="#" target="_blank">https://syntraai.github.io/[YourCompany]</a></p>
-    </div>
-  </div>
+  </main>
 
   <footer>
-    <p>&copy; 2025 IntraSync AI. All rights reserved.</p>
+    <span>© 2025 IntraSync AI. All rights reserved.</span>
+    <span>Built to make internal operations simpler, faster and more consistent.</span>
   </footer>
 
+  <script src="main.js"></script>
   <script>
     document.getElementById("registerForm").addEventListener("submit", function(e) {
       e.preventDefault();
@@ -363,6 +214,5 @@
       });
     });
   </script>
-
 </body>
 </html>
