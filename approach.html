@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <title>WayNew | How we work</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="icon" type="image/jpeg" href="WayNew.jpg" />
   <link rel="apple-touch-icon" href="WayNew.jpg" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="nav-left">
@@ -29,12 +32,16 @@
         <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu ▾</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        Menu ▾
+      </button>
     </div>
   </nav>
 
+  <!-- MAIN -->
   <main>
     <section class="page" id="approach">
+
       <div class="section-header reveal">
         <div class="eyebrow">How we work</div>
 
@@ -49,56 +56,55 @@
         </p>
       </div>
 
-      <div class="steps reveal">
+      <!-- STEPS (uses existing styling that already works) -->
+      <div class="hero-metrics hero-metrics-inline reveal">
 
-        <div class="step-card">
-          <div class="step-number">01</div>
-          <div class="step-title">Discover and prioritise</div>
-          <div class="step-text">
+        <div class="metric-item">
+          <p class="metric-label">01 — Discover and prioritise</p>
+          <p class="metric-sub">
             We assess operational challenges, data availability, and system constraints,
             identifying AI opportunities with a clear balance between impact and feasibility.
             This results in a focused, value-driven roadmap.
-          </div>
-          <div class="step-tag">Value-driven roadmap</div>
+          </p>
+          <p class="metric-sub"><strong>Value-driven roadmap</strong></p>
         </div>
 
-        <div class="step-card">
-          <div class="step-number">02</div>
-          <div class="step-title">Design the decision framework</div>
-          <div class="step-text">
-            We define how predictions and insights integrate into daily workflows:
+        <div class="metric-item">
+          <p class="metric-label">02 — Design the decision framework</p>
+          <p class="metric-sub">
+            We define how predictions and insights integrate into workflows:
             who uses them, when they are used, and how success is measured.
             This ensures alignment before any model development begins.
-          </div>
-          <div class="step-tag">Operational alignment</div>
+          </p>
+          <p class="metric-sub"><strong>Operational alignment</strong></p>
         </div>
 
-        <div class="step-card">
-          <div class="step-number">03</div>
-          <div class="step-title">Build, validate, and operationalise</div>
-          <div class="step-text">
+        <div class="metric-item">
+          <p class="metric-label">03 — Build and operationalise</p>
+          <p class="metric-sub">
             We develop robust data pipelines and models using modern tooling,
-            with a strong focus on explainability, monitoring, and reliability.
+            with a strong focus on reliability, explainability, and monitoring.
             Systems are designed to be production-ready from the outset.
-          </div>
-          <div class="step-tag">Production-grade AI</div>
+          </p>
+          <p class="metric-sub"><strong>Production-grade AI</strong></p>
         </div>
 
-        <div class="step-card">
-          <div class="step-number">04</div>
-          <div class="step-title">Deploy, adopt, and scale</div>
-          <div class="step-text">
+        <div class="metric-item">
+          <p class="metric-label">04 — Deploy and scale</p>
+          <p class="metric-sub">
             We integrate solutions into existing environments, support user adoption,
-            and iterate based on real-world usage. Once value is demonstrated,
-            solutions are scaled across teams, sites, or business units.
-          </div>
-          <div class="step-tag">Sustainable impact</div>
+            and iterate based on real-world usage.
+            Once value is demonstrated, we scale across teams, sites, or business units.
+          </p>
+          <p class="metric-sub"><strong>Sustainable impact</strong></p>
         </div>
 
       </div>
+
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <span>© <span id="year"></span> WayNew. All rights reserved.</span>
     <span>Built for organisations that care about reliability, safety, and impact.</span>
