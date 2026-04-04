@@ -10,6 +10,118 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .home-hero {
+      align-items: start;
+      gap: 2.4rem;
+    }
+
+    .home-hero .hero-text {
+      padding-top: 0.2rem;
+    }
+
+    .home-hero .hero-pill {
+      margin-bottom: 1rem;
+    }
+
+    .home-hero h1 {
+      max-width: 13.5ch;
+      font-size: clamp(3rem, 5.2vw, 4.8rem);
+      line-height: 1.02;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .home-hero .hero-subtitle {
+      max-width: 40rem;
+      font-size: 1.08rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .home-hero .hero-meta {
+      gap: 1rem;
+      max-width: 46rem;
+      margin-top: 0.3rem;
+    }
+
+    .home-hero .hero-meta-item {
+      font-size: 1rem;
+      line-height: 1.45;
+      gap: 0.7rem;
+    }
+
+    .home-hero .hero-meta-dot {
+      width: 10px;
+      height: 10px;
+      margin-top: 0.42rem;
+      background: #f5ab4b;
+      box-shadow: 0 0 0 5px rgba(245, 171, 75, 0.14);
+    }
+
+    .home-hero .hero-panel {
+      padding-top: 0.45rem;
+    }
+
+    .home-hero .hero-summary {
+      border-radius: 26px;
+      padding: 1.7rem 1.5rem 1.45rem;
+    }
+
+    .home-hero .hero-summary-top {
+      align-items: flex-start;
+    }
+
+    .home-hero .hero-card-title {
+      margin-bottom: 0.3rem;
+    }
+
+    .home-hero .hero-summary-subtitle {
+      max-width: 20rem;
+      line-height: 1.4;
+    }
+
+    .home-hero .metric-value {
+      font-size: 1.45rem;
+    }
+
+    .home-hero .metric-sub {
+      max-width: none;
+    }
+
+    .home-hero .case-highlight {
+      font-size: 1.08rem;
+    }
+
+    .home-hero .case-tags {
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 1100px) {
+      .home-hero h1 {
+        max-width: 11ch;
+        font-size: clamp(2.7rem, 5vw, 4rem);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .home-hero h1 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .home-hero .hero-actions {
+        width: 100%;
+      }
+
+      .home-hero .btn-primary,
+      .home-hero .btn-outline {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -38,7 +150,7 @@
   </nav>
 
   <main>
-    <section class="hero hero-open">
+    <section class="hero hero-open home-hero">
       <header class="hero-text reveal">
         <div class="hero-pill">
           <span class="hero-pill-icon">↑</span>
