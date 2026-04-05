@@ -10,6 +10,37 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* 🔥 HERO FIXES */
+
+    .hero {
+      display: block; /* i.p.v. grid → geen lege rechterkolom */
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3.2rem 1.6rem 2rem;
+    }
+
+    .hero-text {
+      max-width: 760px; /* breder maken */
+    }
+
+    .hero h1 {
+      max-width: 100%; /* geen smalle kolom meer */
+      color: #000; /* zwart */
+    }
+
+    .hero-highlight {
+      color: #000; /* ook zwart maken */
+    }
+
+    /* snapshot spacing fix */
+    .snapshot-section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1.6rem 3rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,15 +62,13 @@
         <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        Menu ▾
-      </button>
+      <button class="nav-toggle" id="navToggle">Menu ▾</button>
     </div>
   </nav>
 
   <main>
     <!-- HERO -->
-    <section class="hero hero-open">
+    <section class="hero">
       <header class="hero-text reveal">
         <div class="hero-pill">
           <span class="hero-pill-icon">↑</span>
@@ -47,8 +76,7 @@
         </div>
 
         <h1>
-          AI that improves<br />
-          <span class="hero-highlight">real-world operations</span>.
+          AI that improves real-world operations.
         </h1>
 
         <p class="hero-subtitle">
@@ -78,9 +106,10 @@
       </header>
     </section>
 
-    <!-- SNAPSHOT UNDER HERO -->
-    <section style="max-width:1120px; margin:0 auto; padding:0 1.6rem 3rem;">
+    <!-- SNAPSHOT -->
+    <section class="snapshot-section">
       <div class="hero-panel reveal">
+
         <div class="hero-floating-pill">
           <span>✔</span>
           Production grade models, not just concepts.
