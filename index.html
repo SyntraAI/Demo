@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* 🔥 HERO FULL WIDTH FIX */
-
+    /* Hero full width without empty right column */
     .hero {
       display: block;
       max-width: 1120px;
@@ -22,23 +21,40 @@
     }
 
     .hero-text {
-      max-width: 100%; /* FULL WIDTH */
+      max-width: 100%;
     }
 
     .hero h1 {
       max-width: 100%;
-      color: #333333; /* juiste kleur */
+      color: #333333;
     }
 
     .hero-highlight {
-      color: var(--brand-primary); /* hou je accentkleur */
+      color: #333333;
     }
 
-    /* snapshot spacing */
+    .hero-subtitle {
+      max-width: 100%;
+    }
+
     .snapshot-section {
       max-width: 1120px;
       margin: 0 auto;
       padding: 1rem 1.6rem 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero,
+      .snapshot-section {
+        padding-inline: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero,
+      .snapshot-section {
+        padding-inline: 1rem;
+      }
     }
   </style>
 </head>
@@ -62,7 +78,9 @@
         <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
       </div>
 
-      <button class="nav-toggle" id="navToggle">Menu ▾</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        Menu ▾
+      </button>
     </div>
   </nav>
 
@@ -70,7 +88,6 @@
     <!-- HERO -->
     <section class="hero">
       <header class="hero-text reveal">
-
         <div class="hero-pill">
           <span class="hero-pill-icon">↑</span>
           <span class="hero-pill-text">Applied AI for operations</span>
@@ -81,8 +98,7 @@
         </h1>
 
         <p class="hero-subtitle">
-          WayNew designs and deploys AI systems that improve decision quality,
-          throughput and reliability in complex operational environments.
+          WayNew designs and deploys AI systems that improve decision quality, throughput and reliability in complex operational environments.
         </p>
 
         <div class="hero-actions">
@@ -104,21 +120,18 @@
             <span>Experience across airports, logistics and enterprise operations.</span>
           </li>
         </ul>
-
       </header>
     </section>
 
     <!-- SNAPSHOT -->
     <section class="snapshot-section">
       <div class="hero-panel reveal">
-
         <div class="hero-floating-pill">
           <span>✔</span>
           Production grade models, not just concepts.
         </div>
 
         <article class="hero-summary">
-
           <div class="hero-summary-top">
             <div>
               <p class="hero-card-title">Operational AI snapshot</p>
@@ -136,7 +149,6 @@
           <div class="hero-summary-divider"></div>
 
           <div class="hero-metrics hero-metrics-inline">
-
             <div class="metric-item">
               <p class="metric-label">Runway and capacity</p>
               <p class="metric-value">8 to 15%</p>
@@ -160,12 +172,10 @@
               <p class="metric-value">3 times</p>
               <p class="metric-sub">Faster, data backed decisions at the edge.</p>
             </div>
-
           </div>
         </article>
       </div>
     </section>
-
   </main>
 
   <footer>
