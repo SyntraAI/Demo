@@ -8,6 +8,187 @@
   <link rel="apple-touch-icon" href="WayNew.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Small additions for the merged expertise block */
+    .what-stack {
+      display: grid;
+      gap: 3rem;
+    }
+
+    .what-capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .what-capability-card {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(74, 174, 232, 0.12);
+      border-radius: 22px;
+      padding: 1.2rem 1.2rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .what-capability-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .what-capability-kicker {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-soft);
+      font-weight: 600;
+    }
+
+    .what-capability-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .what-capability-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .what-capability-text {
+      font-size: 0.94rem;
+      color: var(--text-body);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .value-panel,
+    .expertise-panel {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(74, 174, 232, 0.12);
+      border-radius: 24px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .sector-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .sector-item {
+      padding-left: 1rem;
+      border-left: 2px solid rgba(74, 174, 232, 0.18);
+    }
+
+    .sector-item h3 {
+      font-size: 0.98rem;
+      color: var(--text-dark);
+      margin-bottom: 0.16rem;
+      font-weight: 600;
+    }
+
+    .sector-item p {
+      font-size: 0.92rem;
+      color: var(--text-body);
+    }
+
+    .value-note {
+      margin-top: 1rem;
+      padding: 0.95rem 1rem;
+      background: rgba(242, 251, 255, 0.8);
+      border: 1px solid rgba(74, 174, 232, 0.1);
+      border-radius: 18px;
+    }
+
+    .value-note p {
+      font-size: 0.9rem;
+      color: var(--text-body);
+    }
+
+    .bio-card-merged {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .bio-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #74cbff 0%, #aee8ff 100%);
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .bio-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.15rem;
+    }
+
+    .bio-role {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      margin-bottom: 0.9rem;
+    }
+
+    .bio-text {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      margin-bottom: 0.75rem;
+      max-width: 62ch;
+    }
+
+    .bio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.45rem;
+    }
+
+    .bio-tag {
+      padding: 0.34rem 0.72rem;
+      border-radius: 999px;
+      background: rgba(158, 223, 255, 0.18);
+      border: 1px solid rgba(74, 174, 232, 0.12);
+      font-size: 0.78rem;
+      color: var(--text-body);
+    }
+
+    @media (max-width: 900px) {
+      .what-capabilities-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .bio-card-merged {
+        grid-template-columns: 1fr;
+      }
+
+      .bio-avatar {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -34,163 +215,146 @@
 
   <main>
     <section class="page what-page" id="what-we-do">
-      <header class="section-header reveal">
-        <div class="eyebrow">What WayNew does</div>
-        <h1 class="section-title">Machine learning and AI that move the business forward.</h1>
-        <p class="section-subtitle">
-          WayNew focuses on predictive intelligence for organisations with complex, high-stakes operations.
-          We combine advanced modelling with a practical understanding of how people work, so AI systems are
-          trusted, adopted and measurable.
-        </p>
-      </header>
+      <div class="what-stack">
+        <header class="section-header reveal">
+          <div class="eyebrow">What WayNew does</div>
+          <h1 class="section-title">Applied AI built for real operational decisions.</h1>
+          <p class="section-subtitle">
+            WayNew designs machine learning systems that improve decision quality, speed and reliability in complex environments.
+            The focus is not on dashboards alone, but on AI that fits how teams actually plan, respond and operate.
+          </p>
+        </header>
 
-      <div class="what-layout">
-        <section class="what-flow reveal" aria-labelledby="capabilities-title">
+        <section class="reveal" aria-labelledby="capabilities-title">
           <div class="what-intro-line"></div>
-          <h2 id="capabilities-title" class="what-section-title">How WayNew works in practice</h2>
+          <h2 id="capabilities-title" class="what-section-title">What this looks like in practice</h2>
 
-          <div class="what-items">
-            <article class="what-item">
-              <div class="what-item-top">
-                <span class="what-item-kicker">ML and AI</span>
-                <span class="what-item-icon">📈</span>
+          <div class="what-capabilities-grid">
+            <article class="what-capability-card">
+              <div class="what-capability-top">
+                <span class="what-capability-kicker">Prediction</span>
+                <span class="what-capability-icon">📈</span>
               </div>
-              <h3 class="what-item-title">Predictive and prescriptive intelligence</h3>
-              <p class="what-item-text">
-                Forecast demand, delays or failures and recommend the best actions.
-                From runway sequencing to inventory and capacity plans, models plug directly
-                into existing decision flows.
+              <h3 class="what-capability-title">Predictive and prescriptive intelligence</h3>
+              <p class="what-capability-text">
+                Forecast delays, demand, failures or workload and support better decisions with recommendations that fit operational reality.
               </p>
             </article>
 
-            <article class="what-item">
-              <div class="what-item-top">
-                <span class="what-item-kicker">Operations</span>
-                <span class="what-item-icon">⚙️</span>
+            <article class="what-capability-card">
+              <div class="what-capability-top">
+                <span class="what-capability-kicker">Operations</span>
+                <span class="what-capability-icon">⚙️</span>
               </div>
-              <h3 class="what-item-title">Operational excellence at scale</h3>
-              <p class="what-item-text">
-                We transform data from multiple systems into reliable pipelines and design
-                interfaces that make AI insights usable for controllers, planners
-                and frontline teams.
+              <h3 class="what-capability-title">Operational AI that teams can use</h3>
+              <p class="what-capability-text">
+                Turn fragmented data into reliable pipelines and decision support tools that help planners, controllers and frontline teams act faster.
               </p>
             </article>
 
-            <article class="what-item">
-              <div class="what-item-top">
-                <span class="what-item-kicker">Analytics</span>
-                <span class="what-item-icon">🧠</span>
+            <article class="what-capability-card">
+              <div class="what-capability-top">
+                <span class="what-capability-kicker">Simulation</span>
+                <span class="what-capability-icon">🧠</span>
               </div>
-              <h3 class="what-item-title">Scenario and decision support</h3>
-              <p class="what-item-text">
-                Simulation tools, digital twins and self-updating dashboards that connect
-                strategic questions to operational detail, including impact on service,
-                throughput and cost.
+              <h3 class="what-capability-title">Scenario modelling and decision support</h3>
+              <p class="what-capability-text">
+                Use simulations, digital twins and self-updating analytics to connect strategic choices to measurable operational impact.
               </p>
             </article>
 
-            <article class="what-item">
-              <div class="what-item-top">
-                <span class="what-item-kicker">Adoption</span>
-                <span class="what-item-icon">🤝</span>
+            <article class="what-capability-card">
+              <div class="what-capability-top">
+                <span class="what-capability-kicker">Adoption</span>
+                <span class="what-capability-icon">🤝</span>
               </div>
-              <h3 class="what-item-title">Change that lasts</h3>
-              <p class="what-item-text">
-                We involve stakeholders early, co-design protocols and define clear indicators
-                so every AI initiative is evaluated on business impact, not only model accuracy.
+              <h3 class="what-capability-title">Deployment that creates lasting value</h3>
+              <p class="what-capability-text">
+                Build with users in mind from the start, define clear success indicators and make sure solutions are trusted, adopted and scalable.
               </p>
             </article>
           </div>
         </section>
 
-        <aside class="what-context reveal" aria-labelledby="value-title">
-          <div class="what-context-intro">
+        <section class="value-grid reveal" aria-labelledby="value-title">
+          <article class="value-panel">
             <p class="what-context-label">Where WayNew creates value</p>
             <h2 id="value-title" class="what-context-title">
-              Built for environments where reliability, speed and judgement matter.
+              Best suited to environments where reliability, speed and judgement matter.
             </h2>
             <p class="what-context-text">
-              The foundation lies in aerospace engineering and air traffic management,
-              environments where safety, reliability and regulation are non-negotiable.
-              The same discipline now powers projects across other domains.
+              The roots of WayNew lie in aerospace engineering and air traffic management, where safety, timing and operational discipline are non-negotiable.
+              That same way of working now supports projects across transport, logistics, production and enterprise operations.
             </p>
-          </div>
 
-          <div class="what-sectors">
-            <div class="what-sector">
-              <h3>Airports and transport</h3>
-              <p>Runway and gate throughput, delay prediction, passenger and baggage flows.</p>
+            <div class="sector-list">
+              <div class="sector-item">
+                <h3>Airports and transport</h3>
+                <p>Runway and gate throughput, delay prediction, passenger and baggage flows.</p>
+              </div>
+
+              <div class="sector-item">
+                <h3>Logistics and supply chain</h3>
+                <p>Routing, network optimisation, capacity planning and resource allocation.</p>
+              </div>
+
+              <div class="sector-item">
+                <h3>Industrial production and energy</h3>
+                <p>Equipment health prediction, output forecasting and intervention planning.</p>
+              </div>
+
+              <div class="sector-item">
+                <h3>Enterprise operations</h3>
+                <p>Sales and service analytics, lead prioritisation and workflow support.</p>
+              </div>
             </div>
 
-            <div class="what-sector">
-              <h3>Logistics and supply chain</h3>
-              <p>Routing, network optimisation, capacity and resource allocation.</p>
+            <div class="value-note">
+              <p>
+                The goal is always the same: improve decisions without disrupting how teams already work.
+              </p>
             </div>
 
-            <div class="what-sector">
-              <h3>Industrial production and energy</h3>
-              <p>Equipment health prediction, production forecasting and intervention planning.</p>
+            <ul class="pill-row">
+              <li class="pill">Operational AI for complex environments</li>
+              <li class="pill">Predictive modelling for critical decisions</li>
+              <li class="pill">From proof of concept to production</li>
+              <li class="pill">Data products that fit daily workflows</li>
+            </ul>
+          </article>
+
+          <article class="expertise-panel" aria-labelledby="expertise-title">
+            <p class="what-context-label">Why clients trust WayNew</p>
+            <h2 id="expertise-title" class="what-context-title">Applied AI from research to daily operations.</h2>
+
+            <div class="bio-card-merged">
+              <div class="bio-avatar">W</div>
+
+              <div>
+                <div class="bio-name">WayNew</div>
+                <div class="bio-role">Applied AI and Data Science Partner</div>
+
+                <p class="bio-text">
+                  The team behind WayNew has developed and deployed predictive models and AI systems for air traffic control, airports, logistics and enterprise operations.
+                  Projects span early concept work through to production-grade systems in regulated environments.
+                </p>
+
+                <p class="bio-text">
+                  The broader body of work includes more than two dozen peer-reviewed publications on AI, aviation and data-driven operations, alongside industry recognition in engineering and air traffic management communities.
+                </p>
+
+                <div class="bio-tags">
+                  <span class="bio-tag">Machine learning strategy</span>
+                  <span class="bio-tag">Predictive analytics</span>
+                  <span class="bio-tag">Operations research</span>
+                  <span class="bio-tag">MLOps and data platforms</span>
+                  <span class="bio-tag">Aviation and transport systems</span>
+                </div>
+              </div>
             </div>
-
-            <div class="what-sector">
-              <h3>Enterprise operations</h3>
-              <p>Sales and service analytics, lead prioritisation and workflow automation.</p>
-            </div>
-          </div>
-
-          <div class="what-note">
-            <p>
-              WayNew focuses on systems that improve decision quality without disrupting how teams already work.
-            </p>
-          </div>
-
-          <ul class="pill-row">
-            <li class="pill">Operational AI for complex environments</li>
-            <li class="pill">Predictive modelling for critical decisions</li>
-            <li class="pill">From proof of concept to production</li>
-            <li class="pill">Data products that fit daily workflows</li>
-          </ul>
-        </aside>
+          </article>
+        </section>
       </div>
-
-      <section class="page" style="padding: 3.5rem 0 0;" aria-labelledby="expertise-title">
-        <div class="section-header reveal" style="margin-bottom: 1.8rem;">
-          <div class="eyebrow">Why clients trust WayNew</div>
-          <h2 id="expertise-title" class="section-title">Applied AI from research to daily operations.</h2>
-          <p class="section-subtitle">
-            WayNew brings together experience in aerospace, data science and operational analytics
-            to deliver end-to-end machine learning systems that work under real-world constraints.
-          </p>
-        </div>
-
-        <div class="bio-card reveal">
-          <div class="bio-avatar">W</div>
-          <div>
-            <div class="bio-name">WayNew</div>
-            <div class="bio-role">Applied AI and Data Science Partner</div>
-
-            <div class="bio-text">
-              The team behind WayNew has led the development and deployment of predictive models and
-              AI solutions for air traffic control, airports, logistics and enterprise operations.
-              Projects span early discovery through to production systems in regulated environments.
-            </div>
-
-            <div class="bio-text">
-              Collectively, the work has contributed to more than two dozen peer-reviewed publications
-              on AI, aviation and data-driven operations, as well as industry recognition within
-              engineering and air traffic management communities.
-            </div>
-
-            <div class="bio-tags">
-              <span class="bio-tag">Machine learning strategy</span>
-              <span class="bio-tag">Predictive analytics</span>
-              <span class="bio-tag">Operations research</span>
-              <span class="bio-tag">MLOps and data platforms</span>
-              <span class="bio-tag">Aviation and transport systems</span>
-            </div>
-          </div>
-        </div>
-      </section>
     </section>
   </main>
 
