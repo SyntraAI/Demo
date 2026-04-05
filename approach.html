@@ -10,9 +10,89 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* 🔥 CONSISTENCY FIX */
+
+    .approach-wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3.2rem 1.6rem 4rem;
+    }
+
+    .approach-header {
+      max-width: 760px;
+      margin-bottom: 3rem;
+    }
+
+    .approach-title {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      line-height: 1.2;
+      color: #333333;
+      margin-bottom: 0.8rem;
+    }
+
+    .approach-sub {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      max-width: 70ch;
+    }
+
+    /* 🔥 STEPS CLEANER */
+
+    .steps {
+      display: grid;
+      gap: 2.2rem;
+      max-width: 760px;
+    }
+
+    .step {
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid rgba(74,174,232,0.12);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-number {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #333333;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-text {
+      font-size: 0.98rem;
+      color: var(--text-body);
+      max-width: 60ch;
+    }
+
+    @media (max-width: 768px) {
+      .approach-wrapper {
+        padding-inline: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .approach-wrapper {
+        padding-inline: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="nav-left">
@@ -27,74 +107,75 @@
         <a href="approach.html" aria-current="page">How we work</a>
         <a href="results.html">Results</a>
         <a href="indexmain.html">IntraSync use case</a>
-        <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
+        <a href="contact.html" class="nav-cta">Talk to us ↗</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        Menu ▾
-      </button>
+      <button class="nav-toggle" id="navToggle">Menu ▾</button>
     </div>
   </nav>
 
   <main>
-    <section class="page" id="approach">
-      <div class="section-header reveal">
+    <section class="approach-wrapper">
+
+      <header class="approach-header reveal">
         <div class="eyebrow">How we work</div>
 
-        <h1 class="section-title">
-          From opportunity to production-grade AI, delivered through a structured approach.
+        <h1 class="approach-title">
+          From opportunity to production-grade AI.
         </h1>
 
-        <p class="section-subtitle">
-          WayNew combines strategic clarity, data science expertise, and engineering discipline
-          to design and deploy AI systems that integrate into real operations.
-          The focus is on decision quality, adoption, and measurable business impact.
+        <p class="approach-sub">
+          WayNew combines strategy, data science and engineering to design AI systems that integrate into real operations.
+          The focus is on decision quality, adoption and measurable impact — not just models.
         </p>
+      </header>
+
+      <div class="steps">
+
+        <div class="step reveal">
+          <div class="step-number">01 — Discover</div>
+          <div class="step-title">Identify where AI creates real value</div>
+          <p class="step-text">
+            We assess operations, data availability and constraints to identify opportunities that balance impact and feasibility.
+            The result is a focused roadmap tied directly to business value.
+          </p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-number">02 — Design</div>
+          <div class="step-title">Define how decisions improve</div>
+          <p class="step-text">
+            We design how predictions integrate into workflows — who uses them, when they are used and how success is measured.
+            This ensures alignment before building anything.
+          </p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-number">03 — Build</div>
+          <div class="step-title">Develop production-grade systems</div>
+          <p class="step-text">
+            We build robust data pipelines and models with a focus on reliability, explainability and monitoring,
+            so systems work in real operational environments.
+          </p>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-number">04 — Scale</div>
+          <div class="step-title">Deploy and expand impact</div>
+          <p class="step-text">
+            We integrate solutions into existing systems, support adoption and iterate based on real usage.
+            Once value is proven, we scale across teams and operations.
+          </p>
+        </div>
+
       </div>
 
-      <div class="hero-metrics hero-metrics-inline reveal">
-        <div class="metric-item">
-          <p class="metric-label">01 — Discover and prioritise</p>
-          <p class="metric-sub">
-            We assess operational challenges, data availability, and system constraints,
-            identifying AI opportunities with a clear balance between impact and feasibility.
-            This results in a focused, value-driven roadmap.
-          </p>
-        </div>
-
-        <div class="metric-item">
-          <p class="metric-label">02 — Design the decision framework</p>
-          <p class="metric-sub">
-            We define how predictions and insights integrate into workflows:
-            who uses them, when they are used, and how success is measured.
-            This ensures alignment before any model development begins.
-          </p>
-        </div>
-
-        <div class="metric-item">
-          <p class="metric-label">03 — Build and operationalise</p>
-          <p class="metric-sub">
-            We develop robust data pipelines and models using modern tooling,
-            with a strong focus on reliability, explainability, and monitoring.
-            Systems are designed to be production-ready from the outset.
-          </p>
-        </div>
-
-        <div class="metric-item">
-          <p class="metric-label">04 — Deploy and scale</p>
-          <p class="metric-sub">
-            We integrate solutions into existing environments, support user adoption,
-            and iterate based on real-world usage.
-            Once value is demonstrated, we scale across teams, sites, or business units.
-          </p>
-        </div>
-      </div>
     </section>
   </main>
 
   <footer>
     <span>© <span id="year"></span> WayNew. All rights reserved.</span>
-    <span>Built for organisations that care about reliability, safety, and impact.</span>
+    <span>Built for organisations that care about reliability, safety and impact.</span>
   </footer>
 
   <script src="main.js"></script>
