@@ -12,29 +12,29 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* 🔥 HERO FIXES */
+    /* 🔥 HERO FULL WIDTH FIX */
 
     .hero {
-      display: block; /* i.p.v. grid → geen lege rechterkolom */
+      display: block;
       max-width: 1120px;
       margin: 0 auto;
       padding: 3.2rem 1.6rem 2rem;
     }
 
     .hero-text {
-      max-width: 760px; /* breder maken */
+      max-width: 100%; /* FULL WIDTH */
     }
 
     .hero h1 {
-      max-width: 100%; /* geen smalle kolom meer */
-      color: #000; /* zwart */
+      max-width: 100%;
+      color: #333333; /* juiste kleur */
     }
 
     .hero-highlight {
-      color: #000; /* ook zwart maken */
+      color: var(--brand-primary); /* hou je accentkleur */
     }
 
-    /* snapshot spacing fix */
+    /* snapshot spacing */
     .snapshot-section {
       max-width: 1120px;
       margin: 0 auto;
@@ -70,13 +70,14 @@
     <!-- HERO -->
     <section class="hero">
       <header class="hero-text reveal">
+
         <div class="hero-pill">
           <span class="hero-pill-icon">↑</span>
           <span class="hero-pill-text">Applied AI for operations</span>
         </div>
 
         <h1>
-          AI that improves real-world operations.
+          AI that improves <span class="hero-highlight">real-world operations</span>.
         </h1>
 
         <p class="hero-subtitle">
@@ -103,6 +104,7 @@
             <span>Experience across airports, logistics and enterprise operations.</span>
           </li>
         </ul>
+
       </header>
     </section>
 
@@ -116,10 +118,13 @@
         </div>
 
         <article class="hero-summary">
+
           <div class="hero-summary-top">
             <div>
               <p class="hero-card-title">Operational AI snapshot</p>
-              <p class="hero-summary-subtitle">Typical value WayNew unlocks in live operations</p>
+              <p class="hero-summary-subtitle">
+                Typical value WayNew unlocks in live operations
+              </p>
             </div>
 
             <div class="hero-card-badge">
@@ -131,6 +136,7 @@
           <div class="hero-summary-divider"></div>
 
           <div class="hero-metrics hero-metrics-inline">
+
             <div class="metric-item">
               <p class="metric-label">Runway and capacity</p>
               <p class="metric-value">8 to 15%</p>
@@ -154,10 +160,12 @@
               <p class="metric-value">3 times</p>
               <p class="metric-sub">Faster, data backed decisions at the edge.</p>
             </div>
+
           </div>
         </article>
       </div>
     </section>
+
   </main>
 
   <footer>
