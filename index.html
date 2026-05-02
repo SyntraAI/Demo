@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WayNew | AI & Data Transformation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/jpeg" href="WayNew.jpg" />
+  <link rel="apple-touch-icon" href="WayNew.jpg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root {
+      --bg: #9fc4e3;
+      --text: #333333;
+      --muted: #4f5b64;
+      --accent: #ff8a4c;
+      --card: rgba(255, 255, 255, 0.22);
+      --border: rgba(255, 255, 255, 0.35);
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+    }
+
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 5rem 1.6rem 3rem;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 40px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    h1 {
+      max-width: 980px;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+    }
+
+    .intro {
+      max-width: 840px;
+      margin-top: 2.6rem;
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      margin-top: 4rem;
+      align-items: start;
+    }
+
+    .steps {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: start;
+      font-size: 1.25rem;
+      line-height: 1.35;
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      background: #ffb04f;
+      border-radius: 50%;
+      margin-top: 0.45rem;
+    }
+
+    .step strong {
+      font-weight: 800;
+    }
+
+    .impact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .impact-card h2 {
+      font-size: 1.8rem;
+      margin: 0 0 1.8rem;
+      letter-spacing: -0.03em;
+    }
+
+    .impact-list {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .impact-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.9rem;
+      align-items: start;
+      line-height: 1.35;
+      font-size: 1.05rem;
+    }
+
+    .impact-item strong {
+      font-weight: 800;
+    }
+
+    .proof {
+      margin-top: 4rem;
+    }
+
+    .proof-title {
+      text-align: center;
+      font-weight: 800;
+      margin-bottom: 1.4rem;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.4rem;
+    }
+
+    .proof-item {
+      text-align: center;
+      padding: 1.2rem;
+    }
+
+    .proof-number {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .proof-label {
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    .cta-row {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--text);
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding: 3.5rem 1rem 2rem;
+      }
+
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="index.html" style="display:flex;align-items:center;gap:0.8rem;">
+          <img src="WayNew.jpg" alt="WayNew Logo" class="nav-logo" />
+          <div class="nav-title">WAYNEW</div>
+        </a>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="what-we-do.html">What we do</a>
+        <a href="approach.html">How we work</a>
+        <a href="results.html">Results</a>
+        <a href="indexmain.html">IntraSync use case</a>
+        <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        Menu ▾
+      </button>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <div class="eyebrow">AI & Data Transformation</div>
+
+    <h1>
+      We turn scattered data into AI-powered systems that improve decisions and deliver measurable ROI
+    </h1>
+
+    <p class="intro">
+      WayNew helps organisations connect their data sources, create reliable dashboards,
+      and apply AI intelligence on top of that foundation. The result: faster decisions,
+      better control, and production systems that teams actually use.
+    </p>
+
+    <section class="content-grid">
+      <div class="steps">
+        <div class="step">
+          <span class="dot"></span>
+          <span>
+            <strong>Connect all relevant data sources</strong> into one trusted data foundation,
+            including operational systems, planning tools, finance data, Excel files, APIs and cloud platforms.
+          </span>
+        </div>
+
+        <div class="step">
+          <span class="dot"></span>
+          <span>
+            <strong>Create dashboards and decision views</strong> so teams can monitor performance,
+            spot bottlenecks and understand what is happening in real time.
+          </span>
+        </div>
+
+        <div class="step">
+          <span class="dot"></span>
+          <span>
+            <strong>Add AI intelligence</strong> to predict outcomes, detect risks,
+            optimise planning and recommend the best next action.
+          </span>
+        </div>
+
+        <div class="step">
+          <span class="dot"></span>
+          <span>
+            <strong>Deploy into daily operations</strong> with reliable production systems,
+            governance, automation, MLOps and clear business ownership.
+          </span>
+        </div>
+
+        <div class="step">
+          <span class="dot"></span>
+          <span>
+            <strong>Measure business impact</strong> through reduced delays, less manual work,
+            better throughput, lower risk and improved operational performance.
+          </span>
+        </div>
+
+        <div class="cta-row">
+          <a href="contact.html" class="btn-primary">Discuss your data landscape <span>➜</span></a>
+          <a href="results.html" class="btn-secondary">View example results <span>⟶</span></a>
+        </div>
+      </div>
+
+      <aside class="impact-card">
+        <h2>Selected impact</h2>
+
+        <div class="impact-list">
+          <div class="impact-item">
+            <span class="dot"></span>
+            <span>
+              <strong>Enterprise data platforms</strong> built and scaled on Azure,
+              Databricks, Fabric and modern cloud infrastructure.
+            </span>
+          </div>
+
+          <div class="impact-item">
+            <span class="dot"></span>
+            <span>
+              <strong>Real-time decision systems</strong> used by controllers,
+              planners and operational teams.
+            </span>
+          </div>
+
+          <div class="impact-item">
+            <span class="dot"></span>
+            <span>
+              <strong>Airport operations</strong> improved through better runway planning,
+              delay prediction and taxi-out optimisation.
+            </span>
+          </div>
+
+          <div class="impact-item">
+            <span class="dot"></span>
+            <span>
+              <strong>Agriculture and automotive</strong> use cases with improved performance,
+              reliability, efficiency and planning quality.
+            </span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="proof">
+      <div class="proof-title">Proof points</div>
+
+      <div class="proof-grid">
+        <div class="proof-item">
+          <div class="proof-number">2,000+</div>
+          <div class="proof-label">users served by internal AI tools and dashboards</div>
+        </div>
+
+        <div class="proof-item">
+          <div class="proof-number">~50%</div>
+          <div class="proof-label">less reporting and preparation time</div>
+        </div>
+
+        <div class="proof-item">
+          <div class="proof-number">20–40%</div>
+          <div class="proof-label">reduction in delays, rework or waste</div>
+        </div>
+
+        <div class="proof-item">
+          <div class="proof-number">25+</div>
+          <div class="proof-label">peer-reviewed AI and data-science publications</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> WayNew. All rights reserved.</span>
+    <span>Built for organisations that want data, dashboards and AI to work together in production.</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
