@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reshaped — AI Boutique</title>
+  <meta name="description" content="AI boutique voor traditionele industrieën." />
+  <style>
+    :root {
+      --bg: #f4f1eb;
+      --ink: #151515;
+      --muted: rgba(21,21,21,.68);
+      --line: rgba(21,21,21,.12);
+      --lime: #d8ff69;
+      --sand: #e7e1d6;
+      --white: rgba(255,255,255,.62);
+      --radius: 34px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(244,241,235,.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand { font-weight: 950; font-size: 24px; letter-spacing: -.04em; }
+    .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 700; }
+    .nav-links a:hover { opacity: .55; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 850;
+      border: 1px solid var(--line);
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.black { background: var(--ink); color: white; border-color: var(--ink); }
+    .btn.light { background: transparent; color: var(--ink); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 0 104px;
+    }
+    .glow {
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: rgba(216,255,105,.48);
+      filter: blur(70px);
+      left: 52%;
+      top: 35px;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 58px;
+      align-items: center;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.44);
+      font-size: 14px;
+      font-weight: 850;
+      margin-bottom: 28px;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      max-width: 760px;
+      font-size: clamp(58px, 9vw, 118px);
+      line-height: .9;
+      letter-spacing: -.075em;
+      font-weight: 950;
+    }
+    .hero p {
+      max-width: 660px;
+      margin-top: 28px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+
+    .hero-card {
+      aspect-ratio: 4 / 5;
+      background: #050505;
+      border-radius: 36px;
+      padding: 16px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.2);
+      transform: rotate(1deg);
+    }
+    .hero-card-inner {
+      height: 100%;
+      border-radius: 26px;
+      background: var(--lime);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .factory { font-size: 70px; margin-bottom: 22px; }
+    .hero-card h2 {
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: .9;
+      letter-spacing: -.06em;
+      font-weight: 950;
+    }
+    .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .mini-grid span {
+      background: rgba(255,255,255,.55);
+      border-radius: 18px;
+      padding: 14px 8px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .services {
+      background: #050505;
+      color: white;
+      border-block: 1px solid rgba(0,0,0,.1);
+      padding: 68px 0;
+    }
+    .eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-weight: 950;
+      color: rgba(21,21,21,.48);
+      margin-bottom: 18px;
+    }
+    .services .eyebrow { color: rgba(255,255,255,.48); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .service {
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.055);
+      border-radius: 28px;
+      padding: 28px;
+      font-size: 25px;
+      font-weight: 950;
+      letter-spacing: -.04em;
+    }
+
+    .section { padding: 92px 0; }
+    .section-title {
+      max-width: 760px;
+      font-size: clamp(45px, 7vw, 82px);
+      line-height: .95;
+      letter-spacing: -.065em;
+      font-weight: 950;
+      margin-bottom: 42px;
+    }
+    .case-list { display: grid; gap: 24px; }
+    .case {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      overflow: hidden;
+      background: rgba(255,255,255,.52);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 35px rgba(0,0,0,.04);
+    }
+    .case-visual {
+      min-height: 300px;
+      background: var(--lime);
+      display: grid;
+      place-items: center;
+      font-size: 80px;
+    }
+    .case-icon {
+      background: #050505;
+      color: white;
+      width: 150px;
+      height: 150px;
+      display: grid;
+      place-items: center;
+      border-radius: 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.2);
+    }
+    .case-content { padding: 48px; }
+    .case-content h3 {
+      max-width: 680px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: .96;
+      letter-spacing: -.055em;
+      font-weight: 950;
+    }
+    .case-content p {
+      max-width: 680px;
+      color: var(--muted);
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .tags span {
+      border: 1px solid var(--line);
+      background: var(--bg);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .about { background: var(--sand); padding: 92px 0; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 62px; }
+    .about h2 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: .98;
+      letter-spacing: -.06em;
+      font-weight: 950;
+    }
+    .about p { font-size: 21px; line-height: 1.7; color: var(--muted); }
+    .team { margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .team div { background: rgba(255,255,255,.55); border-radius: 24px; padding: 22px; font-weight: 950; }
+
+    .careers-card {
+      background: #050505;
+      color: white;
+      border-radius: 42px;
+      padding: 56px;
+    }
+    .careers-card .eyebrow { color: rgba(255,255,255,.45); }
+    .careers-card h2 {
+      max-width: 900px;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .95;
+      letter-spacing: -.06em;
+      font-weight: 950;
+    }
+    .roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 34px; }
+    .roles div { border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); border-radius: 24px; padding: 22px; font-weight: 850; }
+
+    .contact-card {
+      background: var(--lime);
+      border-radius: 42px;
+      padding: 58px;
+    }
+    .contact-card h2 {
+      max-width: 980px;
+      font-size: clamp(52px, 8vw, 104px);
+      line-height: .88;
+      letter-spacing: -.075em;
+      font-weight: 950;
+    }
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: end;
+      margin-top: 42px;
+    }
+    .contact-info { font-size: 18px; line-height: 2; font-weight: 850; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      color: rgba(21,21,21,.55);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 18px; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 850px) {
+      .nav-links { display: none; }
+      .hero { padding: 62px 0 76px; }
+      .hero-grid, .case, .about-grid { grid-template-columns: 1fr; }
+      .service-grid, .roles, .team { grid-template-columns: 1fr; }
+      .contact-row { align-items: flex-start; flex-direction: column; }
+      .case-content, .careers-card, .contact-card { padding: 32px; }
+      .hero-card { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">Reshaped</a>
+      <nav class="nav-links" aria-label="Hoofdnavigatie">
+        <a href="#services">Our Services</a>
+        <a href="#cases">Use Cases</a>
+        <a href="#careers">Careers</a>
+        <a href="#about">About us</a>
+      </nav>
+      <a class="btn black" href="#contact">Plan a call</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="glow"></div>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="pill">✦ AI boutique for traditional industries</div>
+          <h1>Your partner in game-changing AI.</h1>
+          <p>We helpen maritime, manufacturing en logistics teams om data, machines en workflows om te zetten in meetbare business impact.</p>
+          <div class="actions">
+            <a class="btn black" href="#contact">Plan a discovery call →</a>
+            <a class="btn light" href="#cases">Explore use cases</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="hero-card-inner">
+            <div class="card-top"><span>Build</span><span>Launch</span><span>Scale</span></div>
+            <div>
+              <div class="factory">🏭</div>
+              <h2>AI that works on the floor.</h2>
+            </div>
+            <div class="mini-grid"><span>Agents</span><span>Data</span><span>ROI</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <div class="eyebrow">Our services</div>
+        <div class="service-grid">
+          <div class="service">AI Strategy</div>
+          <div class="service">AI Agents</div>
+          <div class="service">Workflow Automation</div>
+          <div class="service">Machine Learning</div>
+          <div class="service">Training</div>
+          <div class="service">Launch Support</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="container">
+        <div class="eyebrow">Use cases</div>
+        <h2 class="section-title">Built for real operational impact.</h2>
+
+        <div class="case-list">
+          <article class="case reveal">
+            <div class="case-visual"><div class="case-icon">🧠</div></div>
+            <div class="case-content">
+              <div class="eyebrow">Knowledge agents</div>
+              <h3>We made knowledge searchable and actionable</h3>
+              <p>Collect expertise across teams with an AI agent that makes knowledge instantly accessible, speeding up onboarding and everyday decision-making.</p>
+              <div class="tags"><span>Accelerate onboarding</span><span>Reuse expert know-how</span><span>Improve decisions</span></div>
+            </div>
+          </article>
+
+          <article class="case reveal">
+            <div class="case-visual"><div class="case-icon">🤖</div></div>
+            <div class="case-content">
+              <div class="eyebrow">Automate with agentic AI</div>
+              <h3>We turned manual work into automation</h3>
+              <p>Extract and process information from emails, PDFs and systems, reducing manual work and freeing teams to focus on higher-value tasks.</p>
+              <div class="tags"><span>Automate data capture</span><span>Minimize errors</span><span>Free team capacity</span></div>
+            </div>
+          </article>
+
+          <article class="case reveal">
+            <div class="case-visual"><div class="case-icon">🔧</div></div>
+            <div class="case-content">
+              <div class="eyebrow">Predict with machine learning</div>
+              <h3>We reduced costs with predictive maintenance</h3>
+              <p>Use machine learning to anticipate failures, schedule maintenance proactively and keep industrial assets performing at their best.</p>
+              <div class="tags"><span>Reduce downtime</span><span>Extend equipment life</span><span>Boost efficiency</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">About Reshaped</div>
+          <h2>Accelerating innovation in traditional industries.</h2>
+        </div>
+        <div>
+          <p>An AI boutique preparing businesses for a data-driven future by delivering strategy, custom AI solutions and training that helps teams successfully launch new ways of working.</p>
+          <div class="team">
+            <div>Timo</div><div>Thomas</div><div>Matthijs</div><div>Nick</div><div>Niels</div><div>Shanna</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" class="section">
+      <div class="container careers-card reveal">
+        <div class="eyebrow">Careers</div>
+        <h2>Turn AI ambition into concrete plans that get executed.</h2>
+        <div class="roles">
+          <div>Business Consultant</div>
+          <div>AI Project Lead</div>
+          <div>Software & AI Engineer</div>
+          <div>AI Associate</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" style="padding-top:0">
+      <div class="container contact-card reveal">
+        <h2>Take your business to the next level with Reshaped.</h2>
+        <div class="contact-row">
+          <div class="contact-info">
+            <div>✉ hello@reshaped.nl</div>
+            <div>⌖ Amsterdam, The Netherlands</div>
+          </div>
+          <a class="btn black" href="mailto:hello@reshaped.nl">Contact us →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Reshaped-inspired demo. Built as a single HTML page.</div>
+      <div class="footer-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">LinkedIn</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
