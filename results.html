@@ -46,20 +46,23 @@
     }
 
     .results-feature {
-      background: rgba(255, 255, 255, 0.86);
+      background: rgba(255, 255, 255, 0.88);
       border: 1px solid rgba(74, 174, 232, 0.12);
       border-radius: 28px;
       padding: 1.8rem;
       box-shadow: var(--shadow-soft);
 
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 1.6rem;
       align-items: stretch;
     }
 
     .results-feature-content {
       min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .results-feature-image {
@@ -77,10 +80,6 @@
       display: block;
     }
 
-    .results-feature-top {
-      margin-bottom: 1rem;
-    }
-
     .results-feature-kicker {
       font-size: 0.74rem;
       text-transform: uppercase;
@@ -91,26 +90,20 @@
     }
 
     .results-feature h2 {
-      font-size: 1.45rem;
-      line-height: 1.25;
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      line-height: 1.12;
       color: var(--text-dark);
-      font-weight: 600;
-      max-width: 24ch;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      max-width: 12ch;
     }
 
     .results-feature-text {
       font-size: 1rem;
       color: var(--text-body);
-      max-width: 72ch;
-      margin-bottom: 1.35rem;
-      line-height: 1.65;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+      max-width: 58ch;
     }
 
     .results-metrics-grid {
@@ -119,10 +112,10 @@
     }
 
     .results-metric-card {
-      background: rgba(242, 251, 255, 0.85);
+      background: rgba(242, 251, 255, 0.9);
       border: 1px solid rgba(74, 174, 232, 0.12);
       border-radius: 20px;
-      padding: 1rem 1rem 0.95rem;
+      padding: 1rem;
     }
 
     .results-metric-label {
@@ -139,13 +132,13 @@
       line-height: 1.2;
       color: var(--text-dark);
       font-weight: 700;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.25rem;
     }
 
     .results-metric-text {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-body);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .results-secondary-grid {
@@ -155,7 +148,7 @@
     }
 
     .results-secondary-card {
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.8);
       border: 1px solid rgba(74, 174, 232, 0.12);
       border-radius: 22px;
       padding: 1.25rem 1.2rem;
@@ -191,7 +184,7 @@
       }
 
       .results-feature-image img {
-        min-height: 300px;
+        min-height: 320px;
       }
 
       .results-secondary-grid {
@@ -205,7 +198,7 @@
       }
 
       .results-feature {
-        padding: 1.35rem 1.2rem;
+        padding: 1.3rem;
       }
     }
 
@@ -218,8 +211,10 @@
 </head>
 
 <body>
+
   <nav class="nav">
     <div class="nav-inner">
+
       <div class="nav-left">
         <a href="index.html" style="display:flex;align-items:center;gap:0.8rem;">
           <img src="WayNew.jpg" alt="WayNew Logo" class="nav-logo" />
@@ -240,14 +235,19 @@
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         Menu ▾
       </button>
+
     </div>
   </nav>
 
   <main>
+
     <section class="results-wrapper">
 
       <header class="results-header reveal">
-        <div class="eyebrow">Results</div>
+
+        <div class="eyebrow">
+          Results
+        </div>
 
         <h1 class="results-title">
           Examples of measurable impact in complex operations
@@ -255,9 +255,9 @@
 
         <p class="results-sub">
           WayNew builds AI and analytics systems that improve throughput,
-          stability and decision quality across safety-critical and operationally
-          demanding environments.
+          stability and decision quality across operationally demanding environments.
         </p>
+
       </header>
 
       <div class="results-main">
@@ -266,28 +266,17 @@
 
           <div class="results-feature-content">
 
-            <div class="results-feature-top">
-              <div>
-                <div class="results-feature-kicker">
-                  Featured example
-                </div>
-
-                <h2 id="results-feature-title">
-                  Time based separation and runway throughput optimisation
-                </h2>
-              </div>
+            <div class="results-feature-kicker">
+              Featured example
             </div>
 
-            <div class="badge-row">
-              <span class="badge">Aviation and airports</span>
-              <span class="badge">Predictive modelling</span>
-              <span class="badge">Safety critical</span>
-            </div>
+            <h2 id="results-feature-title">
+              Time based separation and runway throughput optimisation
+            </h2>
 
             <p class="results-feature-text">
-              Together with air traffic management partners, WayNew helped
-              design and validate analytics and AI solutions that optimise
-              runway use while maintaining strict safety standards.
+              AI-supported runway sequencing and predictive operational analytics
+              designed to improve throughput, consistency and decision quality.
             </p>
 
             <div class="results-metrics-grid">
@@ -302,7 +291,7 @@
                 </div>
 
                 <div class="results-metric-text">
-                  Per hour on average during strong headwinds at a major European hub.
+                  Per hour on average during strong headwinds.
                 </div>
               </div>
 
@@ -316,7 +305,7 @@
                 </div>
 
                 <div class="results-metric-text">
-                  Arrival delay per year through better runway sequencing and operational predictability.
+                  Annual arrival delay reduction through smarter sequencing.
                 </div>
               </div>
 
@@ -330,11 +319,12 @@
                 </div>
 
                 <div class="results-metric-text">
-                  Best practices captured and reused across airports and operational teams.
+                  Reusable operational best practices across teams.
                 </div>
               </div>
 
             </div>
+
           </div>
 
           <div class="results-feature-image">
@@ -349,6 +339,7 @@
         <section class="results-secondary-grid" aria-label="Additional examples">
 
           <article class="results-secondary-card reveal">
+
             <div class="results-secondary-meta">
               Industrial production
             </div>
@@ -359,12 +350,13 @@
 
             <div class="results-secondary-text">
               Machine learning models for production lines to detect quality
-              issues earlier, forecast output and support smarter interventions
-              for more stable use of capacity.
+              issues earlier and support more stable use of capacity.
             </div>
+
           </article>
 
           <article class="results-secondary-card reveal">
+
             <div class="results-secondary-meta">
               Enterprise sales and service
             </div>
@@ -374,12 +366,14 @@
             </div>
 
             <div class="results-secondary-text">
-              End-to-end analytics and decision support that help teams
-              prioritise leads, prepare faster and focus on the right customers.
+              Analytics and decision support that help teams prioritise leads,
+              prepare faster and focus on the right customers.
             </div>
+
           </article>
 
           <article class="results-secondary-card reveal">
+
             <div class="results-secondary-meta">
               Research and innovation
             </div>
@@ -389,15 +383,17 @@
             </div>
 
             <div class="results-secondary-text">
-              Work published on topics such as runway operations, resilience
-              and AI-based prediction systems.
+              Published work on runway operations, resilience and predictive AI systems.
             </div>
+
           </article>
 
         </section>
 
       </div>
+
     </section>
+
   </main>
 
   <footer>
@@ -411,5 +407,6 @@
   </footer>
 
   <script src="main.js"></script>
+
 </body>
 </html>
