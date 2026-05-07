@@ -171,10 +171,6 @@
         grid-template-columns: 1fr;
       }
 
-      .results-feature-image {
-        order: -1;
-      }
-
       .results-feature-image img {
         min-height: 300px;
       }
@@ -192,6 +188,22 @@
       .results-feature {
         padding: 1.2rem;
       }
+
+      .results-feature-content {
+        order: 1;
+      }
+
+      .results-feature-image {
+        order: 2;
+      }
+
+      .results-feature h2 {
+        font-size: 2rem;
+      }
+
+      .results-feature-image img {
+        min-height: 260px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -199,8 +211,13 @@
         padding-inline: 1rem;
       }
 
+      .results-feature {
+        padding: 1rem;
+        gap: 1.2rem;
+      }
+
       .results-feature h2 {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
       }
     }
   </style>
@@ -271,7 +288,7 @@
           </div>
 
           <div class="results-feature-image">
-            <img src="Pictureval1.png" alt="Air traffic control tower operations" />
+            <img src="Picturevalidation.png" alt="Air traffic control tower operations" />
           </div>
         </section>
 
