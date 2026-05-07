@@ -1,1 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WayNew | Applied AI for Real Business Impact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/jpeg" href="WayNew.jpg" />
+  <link rel="apple-touch-icon" href="WayNew.jpg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 5rem 1.6rem 3rem;
+    }
+
+    .hero-text {
+      max-width: 820px;
+      width: 100%;
+    }
+
+    .hero h1 {
+      max-width: 100%;
+      color: #333333;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      margin: 0 auto 2.2rem;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #666666;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .snapshot-section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1.6rem 3rem;
+    }
+
+    .snapshot-meta {
+      list-style: none;
+      padding: 0;
+      margin: 1.4rem 0 0;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .snapshot-meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      color: #555555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .snapshot-meta-dot {
+      width: 8px;
+      height: 8px;
+      background: #333333;
+      border-radius: 50%;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero,
+      .snapshot-section {
+        padding-inline: 1.1rem;
+      }
+
+      .hero {
+        padding-top: 4rem;
+      }
+
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.05rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero,
+      .snapshot-section {
+        padding-inline: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-actions a {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="index.html" style="display:flex;align-items:center;gap:0.8rem;">
+          <img src="WayNew.jpg" alt="WayNew Logo" class="nav-logo" />
+          <div class="nav-title">WAYNEW</div>
+        </a>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="what-we-do.html">What we do</a>
+        <a href="approach.html">How we work</a>
+        <a href="results.html">Results</a>
+        <a href="indexmain.html">IntraSync use case</a>
+        <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        Menu ▾
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <header class="hero-text reveal">
+
+        <h1>
+          We turn your data into practical decisions
+        </h1>
+
+        <p class="hero-subtitle">
+          We help operations teams make faster and better decisions
+        </p>
+
+        <div class="hero-actions">
+          <a href="contact.html" class="btn-primary">
+            Schedule a discovery call <span>➜</span>
+          </a>
+
+          <a href="results.html" class="btn-outline">
+            View example results <span>⟶</span>
+          </a>
+        </div>
+
+      </header>
+    </section>
+
+    <!-- SNAPSHOT -->
+    <section class="snapshot-section">
+      <div class="hero-panel reveal">
+        <article class="hero-summary">
+
+          <div class="hero-summary-top">
+            <div>
+              <p class="hero-card-title">Operational AI snapshot</p>
+
+              <p class="hero-summary-subtitle">
+                Typical value WayNew unlocks in live operations
+              </p>
+
+              <ul class="snapshot-meta">
+                <li class="snapshot-meta-item">
+                  <span class="snapshot-meta-dot"></span>
+                  <span>
+                    <strong>15+ years of experience</strong> in AI, optimisation and predictive modelling.
+                  </span>
+                </li>
+
+                <li class="snapshot-meta-item">
+                  <span class="snapshot-meta-dot"></span>
+                  <span>
+                    Experience across airports, logistics and enterprise operations.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hero-card-badge">
+              <span></span>
+              In live operations
+            </div>
+          </div>
+
+          <div class="hero-summary-divider"></div>
+
+          <div class="hero-metrics hero-metrics-inline">
+
+            <div class="metric-item">
+              <p class="metric-label">Runway and capacity</p>
+              <p class="metric-value">8 to 15%</p>
+              <p class="metric-sub">
+                Throughput increase with safety preserved.
+              </p>
+            </div>
+
+            <div class="metric-item">
+              <p class="metric-label">Delay and waste</p>
+              <p class="metric-value">20 to 40%</p>
+              <p class="metric-sub">
+                Reduction in delays, rework or scrap.
+              </p>
+            </div>
+
+            <div class="metric-item">
+              <p class="metric-label">Preparation time</p>
+              <p class="metric-value">50% less</p>
+              <p class="metric-sub">
+                Less manual preparation for frontline teams.
+              </p>
+            </div>
+
+            <div class="metric-item">
+              <p class="metric-label">Decision speed</p>
+              <p class="metric-value">3 times</p>
+              <p class="metric-sub">
+                Faster, data backed decisions at the edge.
+              </p>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> WayNew. All rights reserved.</span>
+    <span>Built for organisations that care about reliability, safety and impact.</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
 
