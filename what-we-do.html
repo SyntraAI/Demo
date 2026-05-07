@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Small additions for the merged expertise block */
     .what-stack {
       display: grid;
       gap: 3rem;
@@ -44,11 +43,6 @@
       letter-spacing: 0.14em;
       color: var(--text-soft);
       font-weight: 600;
-    }
-
-    .what-capability-icon {
-      font-size: 1.1rem;
-      line-height: 1;
     }
 
     .what-capability-title {
@@ -155,6 +149,32 @@
       max-width: 62ch;
     }
 
+    .bio-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 1.2rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .bio-bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: var(--text-body);
+    }
+
+    .bio-bullet-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #333333;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
     .bio-tags {
       display: flex;
       flex-wrap: wrap;
@@ -233,7 +253,6 @@
             <article class="what-capability-card">
               <div class="what-capability-top">
                 <span class="what-capability-kicker">Prediction</span>
-                <span class="what-capability-icon"></span>
               </div>
               <h3 class="what-capability-title">Predictive and prescriptive intelligence</h3>
               <p class="what-capability-text">
@@ -244,7 +263,6 @@
             <article class="what-capability-card">
               <div class="what-capability-top">
                 <span class="what-capability-kicker">Operations</span>
-                <span class="what-capability-icon"></span>
               </div>
               <h3 class="what-capability-title">Operational AI that teams can use</h3>
               <p class="what-capability-text">
@@ -255,7 +273,6 @@
             <article class="what-capability-card">
               <div class="what-capability-top">
                 <span class="what-capability-kicker">Simulation</span>
-                <span class="what-capability-icon"></span>
               </div>
               <h3 class="what-capability-title">Scenario modelling and decision support</h3>
               <p class="what-capability-text">
@@ -266,7 +283,6 @@
             <article class="what-capability-card">
               <div class="what-capability-top">
                 <span class="what-capability-kicker">Adoption</span>
-                <span class="what-capability-icon"></span>
               </div>
               <h3 class="what-capability-title">Deployment that creates lasting value</h3>
               <p class="what-capability-text">
@@ -335,9 +351,20 @@
                 <div class="bio-role">Applied AI and Data Science Partner</div>
 
                 <p class="bio-text">
-                  The team behind WayNew has developed and deployed predictive models and AI systems for air traffic control, airports, logistics and enterprise operations.
-                  Projects span early concept work through to production-grade systems in regulated environments.
+                  WayNew builds AI and analytics systems that improve throughput, stability and decision quality. The work spans safety-critical operations, industrial environments and enterprise workflows.
                 </p>
+
+                <ul class="bio-bullets">
+                  <li class="bio-bullet-item">
+                    <span class="bio-bullet-dot"></span>
+                    <span><strong>15+ years of experience</strong> in AI, optimisation and predictive modelling.</span>
+                  </li>
+
+                  <li class="bio-bullet-item">
+                    <span class="bio-bullet-dot"></span>
+                    <span>Experience across airports, logistics and enterprise operations.</span>
+                  </li>
+                </ul>
 
                 <p class="bio-text">
                   The broader body of work includes more than two dozen peer-reviewed publications on AI, aviation and data-driven operations, alongside industry recognition in engineering and air traffic management communities.
