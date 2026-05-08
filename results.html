@@ -18,8 +18,9 @@
     }
 
     .results-header {
-      max-width: 760px;
-      margin-bottom: 3rem;
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      text-align: center;
     }
 
     .results-title {
@@ -32,7 +33,8 @@
     .results-sub {
       font-size: 1.05rem;
       color: var(--text-body);
-      max-width: 70ch;
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .results-main {
@@ -239,93 +241,174 @@
         <a href="approach.html">How we work</a>
         <a href="results.html" aria-current="page">Results</a>
         <a href="indexmain.html">IntraSync use case</a>
-        <a href="contact.html" class="nav-cta">Talk to us <span>↗</span></a>
+        <a href="contact.html" class="nav-cta">
+          Talk to us <span>↗</span>
+        </a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu ▾</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        Menu ▾
+      </button>
     </div>
   </nav>
 
   <main>
     <section class="results-wrapper">
+
+      <!-- CENTERED HEADER -->
       <header class="results-header reveal">
-        <div class="eyebrow">Results</div>
-        <h1 class="results-title">Examples of measurable impact in complex operations</h1>
+
+        <h1 class="results-title">
+          Examples of measurable impact in complex operations
+        </h1>
+
         <p class="results-sub">
           WayNew builds AI and analytics systems that improve throughput,
-          stability and decision quality across operationally demanding environments.
+          stability and decision quality across operationally demanding
+          environments.
         </p>
+
       </header>
 
       <div class="results-main">
+
+        <!-- FEATURED RESULT -->
         <section class="results-feature reveal" aria-labelledby="results-feature-title">
+
           <div class="results-feature-content">
-            <div class="results-feature-kicker">Featured example</div>
+
+            <div class="results-feature-kicker">
+              Featured example
+            </div>
 
             <h2 id="results-feature-title">
               Time based separation and runway throughput optimisation
             </h2>
 
             <div class="results-metrics-grid">
+
               <div class="results-metric-card">
-                <div class="results-metric-label">Capacity impact</div>
-                <div class="results-metric-value">One more landing</div>
-                <div class="results-metric-text">Per hour on average during strong headwinds.</div>
+                <div class="results-metric-label">
+                  Capacity impact
+                </div>
+
+                <div class="results-metric-value">
+                  One more landing
+                </div>
+
+                <div class="results-metric-text">
+                  Per hour on average during strong headwinds.
+                </div>
               </div>
 
               <div class="results-metric-card">
-                <div class="results-metric-label">Delay reduction</div>
-                <div class="results-metric-value">80,000 minutes less</div>
-                <div class="results-metric-text">Annual arrival delay reduction through smarter sequencing.</div>
+                <div class="results-metric-label">
+                  Delay reduction
+                </div>
+
+                <div class="results-metric-value">
+                  80,000 minutes less
+                </div>
+
+                <div class="results-metric-text">
+                  Annual arrival delay reduction through smarter sequencing.
+                </div>
               </div>
 
               <div class="results-metric-card">
-                <div class="results-metric-label">Operational consistency</div>
-                <div class="results-metric-value">Standardised playbooks</div>
-                <div class="results-metric-text">Reusable operational best practices across teams.</div>
+                <div class="results-metric-label">
+                  Operational consistency
+                </div>
+
+                <div class="results-metric-value">
+                  Standardised playbooks
+                </div>
+
+                <div class="results-metric-text">
+                  Reusable operational best practices across teams.
+                </div>
               </div>
+
             </div>
           </div>
 
           <div class="results-feature-image">
-            <img src="Picturevalidation.png" alt="Air traffic control tower operations" />
+            <img
+              src="Picturevalidation.png"
+              alt="Air traffic control tower operations"
+            />
           </div>
+
         </section>
 
+        <!-- SECONDARY RESULTS -->
         <section class="results-secondary-grid" aria-label="Additional examples">
+
           <article class="results-secondary-card reveal">
-            <div class="results-secondary-meta">Industrial production</div>
-            <div class="results-secondary-title">Predictive quality and throughput insights</div>
+
+            <div class="results-secondary-meta">
+              Industrial production
+            </div>
+
+            <div class="results-secondary-title">
+              Predictive quality and throughput insights
+            </div>
+
             <div class="results-secondary-text">
               Machine learning models for production lines to detect quality
               issues earlier and support more stable use of capacity.
             </div>
+
           </article>
 
           <article class="results-secondary-card reveal">
-            <div class="results-secondary-meta">Enterprise sales and service</div>
-            <div class="results-secondary-title">AI-enhanced customer analytics</div>
+
+            <div class="results-secondary-meta">
+              Enterprise sales and service
+            </div>
+
+            <div class="results-secondary-title">
+              AI-enhanced customer analytics
+            </div>
+
             <div class="results-secondary-text">
               Analytics and decision support that help teams prioritise leads,
               prepare faster and focus on the right customers.
             </div>
+
           </article>
 
           <article class="results-secondary-card reveal">
-            <div class="results-secondary-meta">Research and innovation</div>
-            <div class="results-secondary-title">More than 25 peer-reviewed publications</div>
+
+            <div class="results-secondary-meta">
+              Research and innovation
+            </div>
+
+            <div class="results-secondary-title">
+              More than 25 peer-reviewed publications
+            </div>
+
             <div class="results-secondary-text">
               Published work on runway operations, resilience and predictive AI systems.
             </div>
+
           </article>
+
         </section>
+
       </div>
     </section>
   </main>
 
   <footer>
-    <span>© <span id="year"></span> WayNew. All rights reserved.</span>
-    <span>Built for organisations that care about reliability, safety and impact.</span>
+    <span>
+      © <span id="year"></span> WayNew. All rights reserved.
+    </span>
+
+    <span>
+      Built for organisations that care about reliability,
+      safety and impact.
+    </span>
   </footer>
 
   <script src="main.js"></script>
